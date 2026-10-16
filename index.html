@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPTEL Psychology of Learning - MCQ Hub</title>
+  <meta name="description" content="Interactive year-wise MCQ practice platform for NPTEL Psychology of Learning featuring Study Mode and Exam Mode.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <h1>Psychology of Learning</h1>
+          <p>NPTEL Question Bank • IIT Kharagpur</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Sound Effect Toggle -->
+        <button id="soundToggleBtn" class="btn-icon" title="Toggle Sound Feedback" aria-label="Toggle Sound">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+
+        <!-- Theme Toggle (Dark / Light) -->
+        <button id="themeToggleBtn" class="btn-icon" title="Switch Theme" aria-label="Switch Theme">
+          <!-- Populated by JS -->
+        </button>
+      </div>
+    </header>
+
+    <!-- ==========================================
+         VIEW 1: SETUP & CONFIGURATION
+         ========================================== -->
+    <main id="setupView" class="glass-panel">
+      <div class="setup-hero">
+        <span class="setup-badge">Comprehensive Question Bank</span>
+        <h2>Choose Your Learning Mode</h2>
+        <p>Prepare effectively with 480+ curated assignment MCQs across all available years with verified answers and lecture slide solutions.</p>
+      </div>
+
+      <!-- Mode Cards Grid -->
+      <div class="mode-grid">
+        <!-- Study Mode -->
+        <div id="modeStudyCard" class="mode-card active">
+          <div class="mode-card-header">
+            <div class="mode-card-icon">📖</div>
+            <div class="mode-check">✓</div>
+          </div>
+          <div class="mode-title">Study Mode</div>
+          <div class="mode-desc">
+            Learn at your own pace. Select an option and get <strong>instant feedback</strong> with the correct answer and detailed lecture note solutions immediately.
+          </div>
+          <div class="mode-features">
+            <span class="badge-tag">⚡ Immediate Feedback</span>
+            <span class="badge-tag">💡 Slide Explanations</span>
+            <span class="badge-tag">🔄 Retriable</span>
+          </div>
+        </div>
+
+        <!-- Exam Mode -->
+        <div id="modeExamCard" class="mode-card">
+          <div class="mode-card-header">
+            <div class="mode-card-icon">⏱️</div>
+            <div class="mode-check">✓</div>
+          </div>
+          <div class="mode-title">Exam Mode</div>
+          <div class="mode-desc">
+            Simulate a real test environment. Answers are concealed until final submission, with a live timer, flag questions for review, and <strong>scorecard with analytics</strong> at the end.
+          </div>
+          <div class="mode-features">
+            <span class="badge-tag">📊 Final Score & Review</span>
+            <span class="badge-tag">🏷️ Question Flagging</span>
+            <span class="badge-tag">⏳ Timer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Year Selection Section -->
+      <section class="config-group">
+        <div class="config-title">
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Select Years to Include
+          </h3>
+          <div class="config-actions">
+            <button id="selectAllYearsBtn" type="button" class="btn-ghost-sm">Select All</button>
+            <button id="deselectAllYearsBtn" type="button" class="btn-ghost-sm">Clear All</button>
+          </div>
+        </div>
+
+        <div class="year-pills-grid">
+          <label class="year-checkbox-label checked">
+            <div class="year-info">
+              <span class="year-name">July 2026 Set</span>
+              <span class="year-count">Loading...</span>
+            </div>
+            <input type="checkbox" class="year-checkbox" value="2026" checked style="accent-color: var(--primary-600); width: 18px; height: 18px;">
+          </label>
+
+          <label class="year-checkbox-label checked">
+            <div class="year-info">
+              <span class="year-name">July 2025 Set</span>
+              <span class="year-count">Loading...</span>
+            </div>
+            <input type="checkbox" class="year-checkbox" value="2025" checked style="accent-color: var(--primary-600); width: 18px; height: 18px;">
+          </label>
+
+          <label class="year-checkbox-label checked">
+            <div class="year-info">
+              <span class="year-name">July 2024 Set</span>
+              <span class="year-count">Loading...</span>
+            </div>
+            <input type="checkbox" class="year-checkbox" value="2024" checked style="accent-color: var(--primary-600); width: 18px; height: 18px;">
+          </label>
+
+          <label class="year-checkbox-label checked">
+            <div class="year-info">
+              <span class="year-name">July 2023 Set</span>
+              <span class="year-count">Loading...</span>
+            </div>
+            <input type="checkbox" class="year-checkbox" value="2023" checked style="accent-color: var(--primary-600); width: 18px; height: 18px;">
+          </label>
+        </div>
+      </section>
+
+      <!-- Assignment & Customization Options -->
+      <section class="config-group">
+        <div class="config-title">
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            Quiz Options & Filters
+          </h3>
+        </div>
+
+        <!-- Randomize Questions Order Toggle -->
+        <div class="toggle-row">
+          <div class="toggle-label-wrap">
+            <span class="toggle-title">🔀 Randomize Question Order</span>
+            <span class="toggle-subtitle">Shuffle question sequence randomly for a fresh practice session</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="randomizeToggle" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <!-- Shuffle Options Toggle -->
+        <div class="toggle-row">
+          <div class="toggle-label-wrap">
+            <span class="toggle-title">🎲 Shuffle Answer Options</span>
+            <span class="toggle-subtitle">Randomize positions of options (A, B, C, D) to prevent position memorization</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="shuffleOptionsToggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <!-- Filter by Week Assignment -->
+        <div class="toggle-row" style="margin-top: 14px;">
+          <div class="toggle-label-wrap">
+            <span class="toggle-title">📚 Filter by Specific Week Assignment</span>
+            <span class="toggle-subtitle">Focus on a specific week's lecture assignment or test all</span>
+          </div>
+          <select id="weekFilterSelect" style="padding: 8px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: var(--bg-surface); color: var(--text-main); font-weight: 600; font-family: inherit;">
+            <option value="all">All Weeks (0 to 12)</option>
+          </select>
+        </div>
+
+        <!-- Question Count Limit -->
+        <div class="toggle-row" style="margin-top: 14px;">
+          <div class="toggle-label-wrap">
+            <span class="toggle-title">🎯 Number of Questions</span>
+            <span class="toggle-subtitle">Select quiz length</span>
+          </div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <button type="button" class="filter-pill limit-pill" data-limit="10">10 Qs</button>
+            <button type="button" class="filter-pill limit-pill" data-limit="20">20 Qs</button>
+            <button type="button" class="filter-pill limit-pill" data-limit="30">30 Qs</button>
+            <button type="button" class="filter-pill limit-pill" data-limit="50">50 Qs</button>
+            <button type="button" class="filter-pill limit-pill active" data-limit="all">All</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Setup Footer CTA -->
+      <div class="setup-footer">
+        <button id="btnStartQuiz" class="btn-start" type="button">
+          <!-- Populated by JS -->
+        </button>
+        <span id="availableCountText" class="question-summary-badge">Loading questions...</span>
+      </div>
+    </main>
+
+    <!-- ==========================================
+         VIEW 2: QUIZ / TEST VIEW
+         ========================================== -->
+    <main id="quizView" class="quiz-view">
+      <!-- Top Bar -->
+      <div class="quiz-top-bar">
+        <div class="quiz-meta-left">
+          <button id="btnHomeQuiz" class="btn-icon" title="Return to Setup Menu" aria-label="Home">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </button>
+          <div id="quizModePill" class="quiz-mode-pill mode-study-pill">Study Mode</div>
+          <span id="progressText" style="font-size: 0.9rem; font-weight: 700; color: var(--text-secondary);">Question 1 of 50</span>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <!-- Study Mode Score Tracker -->
+          <div id="studyScoreTracker" style="display: none; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); background: var(--bg-card); padding: 6px 14px; border-radius: var(--radius-full); border: 1px solid var(--border-subtle);"></div>
+
+          <!-- Timer -->
+          <div id="timerBox" class="quiz-timer" title="Elapsed Time">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span id="timerDisplay">00:00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linear Progress Line -->
+      <div class="progress-container">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+
+      <!-- Main Layout -->
+      <div class="quiz-layout">
+        <!-- Question Box -->
+        <div class="question-card">
+          <div class="q-header-row">
+            <div class="q-badges">
+              <span id="qNumberText" class="q-badge" style="font-weight: 800; color: var(--text-main);">Question 1</span>
+              <span id="qYearBadge" class="q-badge year">Year 2026</span>
+              <span id="qWeekBadge" class="q-badge">Week 1</span>
+            </div>
+            <button id="btnFlag" class="btn-flag" type="button" title="Bookmark / Mark for review (Shortcut: M)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+              <span>Review Later</span>
+            </button>
+          </div>
+
+          <!-- Question Content -->
+          <div id="questionText" class="question-text">Question content goes here...</div>
+
+          <!-- Options -->
+          <div id="optionsList" class="options-list">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Study Mode Explanation Box -->
+          <div id="explanationBox" class="explanation-box">
+            <div class="explanation-header">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Answer Explanation</span>
+            </div>
+            <div id="explanationSolutionText" class="explanation-text">Solution details...</div>
+          </div>
+
+          <!-- Question Card Navigation Buttons -->
+          <div class="q-footer-nav">
+            <button id="btnPrev" class="btn-secondary" type="button" title="Shortcut: Left Arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+              <span>Previous</span>
+            </button>
+
+            <div style="display: flex; gap: 10px;">
+              <button id="btnFinishQuiz" class="btn-submit-exam" type="button">
+                Submit Exam
+              </button>
+              <button id="btnNext" class="btn-primary" type="button" title="Shortcut: Right Arrow or Enter">
+                <span>Next</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question Palette Side Panel -->
+        <aside class="palette-card">
+          <div class="palette-header">
+            <span>Question Palette</span>
+            <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">Quick Navigation</span>
+          </div>
+
+          <div class="palette-legend">
+            <div class="legend-item"><span class="legend-dot answered"></span> Answered</div>
+            <div class="legend-item"><span class="legend-dot unanswered"></span> Unanswered</div>
+            <div class="legend-item"><span class="legend-dot flagged"></span> Marked</div>
+          </div>
+
+          <div id="paletteGrid" class="palette-grid">
+            <!-- Populated by JS -->
+          </div>
+
+          <div style="margin-top: 20px; font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+            <strong>Keyboard Shortcuts:</strong><br>
+            • Keys 1-5 or A-E: Choose Option<br>
+            • → or Enter: Next Question<br>
+            • ←: Previous Question<br>
+            • M: Mark for Review
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- ==========================================
+         VIEW 3: COMPREHENSIVE EXAM RESULTS VIEW
+         ========================================== -->
+    <main id="resultsView" class="results-view">
+      <div class="results-hero">
+        <div class="score-circle">
+          <span id="resultScoreText" class="score-val">0</span>
+          <span id="resultMaxText" class="score-max">/ 100</span>
+        </div>
+        <h2 id="resultHeadline" class="score-headline">Exam Completed!</h2>
+        <p id="resultDesc" class="score-desc">Here is your performance breakdown across all attempted questions.</p>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div id="statTotal" class="stat-num">0</div>
+            <div class="stat-label">Total Questions</div>
+          </div>
+          <div class="stat-card c-green">
+            <div id="statCorrect" class="stat-num">0</div>
+            <div class="stat-label">Correct</div>
+          </div>
+          <div class="stat-card c-red">
+            <div id="statIncorrect" class="stat-num">0</div>
+            <div class="stat-label">Incorrect</div>
+          </div>
+          <div class="stat-card c-yellow">
+            <div id="statUnanswered" class="stat-num">0</div>
+            <div class="stat-label">Skipped</div>
+          </div>
+          <div class="stat-card">
+            <div id="statAccuracy" class="stat-num">0%</div>
+            <div class="stat-label">Accuracy</div>
+          </div>
+          <div class="stat-card">
+            <div id="statTime" class="stat-num">00:00</div>
+            <div class="stat-label">Time Taken</div>
+          </div>
+        </div>
+
+        <div class="results-actions">
+          <button id="btnRetake" class="btn-primary" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+            <span>Retake Exam</span>
+          </button>
+          <button id="btnReviewInStudy" class="btn-secondary" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            <span>Practice in Study Mode</span>
+          </button>
+          <button id="btnNewQuiz" class="btn-secondary" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            <span>Configure New Session</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Detailed Question Breakdown -->
+      <section class="review-section">
+        <div class="review-toolbar">
+          <h3>Detailed Question Review</h3>
+          <div class="filter-pills">
+            <button type="button" class="filter-pill active" data-filter="all">All Questions</button>
+            <button type="button" class="filter-pill" data-filter="correct">Correct Only</button>
+            <button type="button" class="filter-pill" data-filter="incorrect">Incorrect Only</button>
+            <button type="button" class="filter-pill" data-filter="unanswered">Skipped Only</button>
+          </div>
+        </div>
+
+        <div id="reviewList" class="review-list">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Modal Confirmation Popup -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-icon">⚠️</div>
+      <h3 id="modalTitle" class="modal-title">Confirm Action</h3>
+      <div id="modalMsg" class="modal-msg">Are you sure?</div>
+      <div class="modal-actions">
+        <button id="modalCancelBtn" class="btn-secondary" type="button">Cancel</button>
+        <button id="modalConfirmBtn" class="btn-primary" type="button">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Question Bank & App Logic -->
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,952 @@
+# Dataset compiler for NPTEL Psychology of Learning MCQs
+import json
+
+data = [
+    # ==========================================
+    # YEAR 2026 (July 2026 / July 2025 Set)
+    # ==========================================
+    # Week 0
+    {
+        "id": "2026-w0-q1", "year": "2026", "week": "Week 0",
+        "question": "What is Psychology?",
+        "options": ["Just a social media trend", "An art of living", "A subject about human body", "A study of cognitive processes & behavior"],
+        "answer": 3, "answerText": "A study of cognitive processes & behavior",
+        "explanation": ""
+    },
+    {
+        "id": "2026-w0-q2", "year": "2026", "week": "Week 0",
+        "question": "A broad field of study that explores a variety of questions about thoughts, feelings and actions is -------?",
+        "options": ["Society", "Globalization", "Psychology", "Social Science"],
+        "answer": 2, "answerText": "Psychology",
+        "explanation": ""
+    },
+    {
+        "id": "2026-w0-q3", "year": "2026", "week": "Week 0",
+        "question": "Learning has been a central topic of research in ___.",
+        "options": ["Chemistry", "Physics", "Mathematics", "Psychology"],
+        "answer": 3, "answerText": "Psychology",
+        "explanation": ""
+    },
+    {
+        "id": "2026-w0-q4", "year": "2026", "week": "Week 0",
+        "question": "The word Psyche means -------------?",
+        "options": ["Body or physique", "Mind or soul", "Spirituality", "Hormones"],
+        "answer": 1, "answerText": "Mind or soul",
+        "explanation": ""
+    },
+    {
+        "id": "2026-w0-q5", "year": "2026", "week": "Week 0",
+        "question": "The ___ of learning focuses on how people learn.",
+        "options": ["psychology", "english", "chemistry", "none of the given"],
+        "answer": 0, "answerText": "psychology",
+        "explanation": ""
+    },
+    {
+        "id": "2026-w0-q6", "year": "2026", "week": "Week 0",
+        "question": "\"To help people to function effectively and fulfill their own unique potential\" is the aim of--------------?",
+        "options": ["Humanistic psychology", "Evolutionary biology", "Computer science", "Microbiology"],
+        "answer": 0, "answerText": "Humanistic psychology",
+        "explanation": ""
+    },
+    {
+        "id": "2026-w0-q7", "year": "2026", "week": "Week 0",
+        "question": "Psychology is not an independent science, but dependent on other fields.",
+        "options": ["True", "False"],
+        "answer": 1, "answerText": "False",
+        "explanation": ""
+    },
+    {
+        "id": "2026-w0-q8", "year": "2026", "week": "Week 0",
+        "question": "The study of changes in an individual’s behavior during his/her lifetime is called ----------.",
+        "options": ["Hormonal psychology", "Gender psychology", "Developmental Psychology", "Genetics or Heredity"],
+        "answer": 2, "answerText": "Developmental Psychology",
+        "explanation": ""
+    },
+    {
+        "id": "2026-w0-q9", "year": "2026", "week": "Week 0",
+        "question": "The study of differences and similarities in the behavior of animals of different species is called -----------------------.",
+        "options": ["Developmental psychology", "Cultural psychology", "Personality psychology", "Comparative Psychology"],
+        "answer": 3, "answerText": "Comparative Psychology",
+        "explanation": ""
+    },
+    {
+        "id": "2026-w0-q10", "year": "2026", "week": "Week 0",
+        "question": "Humans are incapable of learning.",
+        "options": ["True", "False"],
+        "answer": 1, "answerText": "False",
+        "explanation": ""
+    },
+
+    # Week 1
+    {
+        "id": "2026-w1-q1", "year": "2026", "week": "Week 1",
+        "question": "Learning is often seen as the contiguous causal effect of ____ on behavior.",
+        "options": ["blood", "bone density", "trauma", "experience"],
+        "answer": 3, "answerText": "experience",
+        "explanation": "Please go through lecture notes of week-1 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2026-w1-q2", "year": "2026", "week": "Week 1",
+        "question": "In order to say that learning has occurred, a hidden change in behavior must occur.",
+        "options": ["True", "False"],
+        "answer": 1, "answerText": "False",
+        "explanation": "Please go through lecture notes of week-1 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2026-w1-q3", "year": "2026", "week": "Week 1",
+        "question": "Which of the following is not a mental construct?",
+        "options": ["skeleton", "knowledge", "representations", "associations"],
+        "answer": 0, "answerText": "skeleton",
+        "explanation": "Please go through lecture notes of week-1 (slide no.04) for better understanding."
+    },
+    {
+        "id": "2026-w1-q4", "year": "2026", "week": "Week 1",
+        "question": "Learning changes the ___ structure of the brain through the process of continuous interactions between the learner and the external environment.",
+        "options": ["physical", "social", "biological", "none of the given"],
+        "answer": 0, "answerText": "physical",
+        "explanation": "Please go through lecture notes of week-1 (slide no.04) for better understanding."
+    },
+    {
+        "id": "2026-w1-q5", "year": "2026", "week": "Week 1",
+        "question": "___ shapes the learning process.",
+        "options": ["Only thoughts", "Only emotions", "Both thoughts and emotions", "Neither thoughts nor emotions"],
+        "answer": 2, "answerText": "Both thoughts and emotions",
+        "explanation": "Please go through lecture notes of week-1 (slide no.07) for better understanding."
+    },
+    {
+        "id": "2026-w1-q6", "year": "2026", "week": "Week 1",
+        "question": "Watson's work included the famous Little Albert experiment in which he conditioned a small child to ___ a white rat.",
+        "options": ["fear", "love", "hate", "play with"],
+        "answer": 0, "answerText": "fear",
+        "explanation": "Please go through lecture notes of week-1 (slide no.07) for better understanding."
+    },
+    {
+        "id": "2026-w1-q7", "year": "2026", "week": "Week 1",
+        "question": "Behaviorism dominated psychology for much of the early ___ century.",
+        "options": ["20th", "19th", "18th", "17th"],
+        "answer": 0, "answerText": "20th",
+        "explanation": "Please go through lecture notes of week-1 (slide no.07) for better understanding."
+    },
+    {
+        "id": "2026-w1-q8", "year": "2026", "week": "Week 1",
+        "question": "The state of “conscious incompetence” may be valuable ____ of a learning experience.",
+        "options": ["at the end", "in the middle", "2 years after the end", "at the start"],
+        "answer": 3, "answerText": "at the start",
+        "explanation": "Please go through lecture notes of week-1 (slide no.11) for better understanding."
+    },
+    {
+        "id": "2026-w1-q9", "year": "2026", "week": "Week 1",
+        "question": "Which of the following is not an outcome of effective e-learning?",
+        "options": ["wider range of strategies", "more reflective approach", "more positive emotions towards learning", "more disconnected knowledge"],
+        "answer": 3, "answerText": "more disconnected knowledge",
+        "explanation": "Please go through lecture notes of week-1 (slide no.14) for better understanding."
+    },
+    {
+        "id": "2026-w1-q10", "year": "2026", "week": "Week 1",
+        "question": "Instrumental conditioning is an example of ___ learning.",
+        "options": ["sensitization", "habituation", "associative", "meaningful"],
+        "answer": 2, "answerText": "associative",
+        "explanation": "Please go through lecture notes of week-1 (slide no.24) for better understanding."
+    },
+
+    # Week 2
+    {
+        "id": "2026-w2-q1", "year": "2026", "week": "Week 2",
+        "question": "The three major types of learning described by ___ psychology are classical conditioning, operant conditioning and observational learning.",
+        "options": ["cognitive", "behavioral", "emotional", "evolutionary"],
+        "answer": 1, "answerText": "behavioral",
+        "explanation": "Please go through lecture notes of week-2 (slide no.2) for better understanding."
+    },
+    {
+        "id": "2026-w2-q2", "year": "2026", "week": "Week 2",
+        "question": "According to the view of Watson, psychology is ___.",
+        "options": ["subjective", "only descriptive", "experimental", "about internal mental processes that cannot be measured and observed"],
+        "answer": 2, "answerText": "experimental",
+        "explanation": "Please go through lecture notes of week-2 (slide no.3) for better understanding."
+    },
+    {
+        "id": "2026-w2-q3", "year": "2026", "week": "Week 2",
+        "question": "___ is given by Ivan Pavlov.",
+        "options": ["Operant conditioning", "Functional conditioning", "Classical conditioning", "Modern conditioning"],
+        "answer": 2, "answerText": "Classical conditioning",
+        "explanation": "Please go through lecture notes of week-2 (slide no.5) for better understanding."
+    },
+    {
+        "id": "2026-w2-q4", "year": "2026", "week": "Week 2",
+        "question": "The process by which organisms learn to respond to certain stimuli but not to others is known as ___.",
+        "options": ["stimulus generalization", "stimulus appreciation", "stimulus discrimination", "stimulus differentiation"],
+        "answer": 2, "answerText": "stimulus discrimination",
+        "explanation": "Please go through lecture notes of week-2 (slide no.11) for better understanding."
+    },
+    {
+        "id": "2026-w2-q5", "year": "2026", "week": "Week 2",
+        "question": "Higher-order conditioning is intrinsically weaker than its first-order counterpart.",
+        "options": ["True", "False"],
+        "answer": 0, "answerText": "True",
+        "explanation": "Please go through lecture notes of week-2 (slide no.12) for better understanding."
+    },
+    {
+        "id": "2026-w2-q6", "year": "2026", "week": "Week 2",
+        "question": "____ is the process of gradually changing the quality of a response.",
+        "options": ["Shaping", "Modeling", "Cueing", "Shifting"],
+        "answer": 0, "answerText": "Shaping",
+        "explanation": "Please go through lecture notes of week-2 (slide no.23) for better understanding."
+    },
+    {
+        "id": "2026-w2-q7", "year": "2026", "week": "Week 2",
+        "question": "The works of ___ were instrumental in engendering the dramatic shift from behaviorism to cognitive theories.",
+        "options": ["Edward C. Tolman", "Jean Piaget", "German Gestalt", "All of the given"],
+        "answer": 3, "answerText": "All of the given",
+        "explanation": "Please go through lecture notes of week-2 (slide no.39) for better understanding."
+    },
+    {
+        "id": "2026-w2-q8", "year": "2026", "week": "Week 2",
+        "question": "___ intelligence is the ability to perceive the visual–spatial world accurately and involves sensitivity to color, line, shape, form, space, and the potential for recognizing and manipulating the patterns of spaces.",
+        "options": ["Interpersonal", "Spatial", "Bodily-kinesthetic", "Linguistic"],
+        "answer": 1, "answerText": "Spatial",
+        "explanation": "Please go through lecture notes of week-2 (slide no.48) for better understanding."
+    },
+    {
+        "id": "2026-w2-q9", "year": "2026", "week": "Week 2",
+        "question": "Sternberg proposed his theory in 1985 as an alternative to the idea of the ___.",
+        "options": ["general intelligence factor", "multiple intelligences", "specific intelligence factor", "unconscious intelligence"],
+        "answer": 0, "answerText": "general intelligence factor",
+        "explanation": "Please go through lecture notes of week-2 (slide no.51) for better understanding."
+    },
+    {
+        "id": "2026-w2-q10", "year": "2026", "week": "Week 2",
+        "question": "Which of the following is not a kind of product in the structure of intellect model?",
+        "options": ["symbolic", "classes", "systems", "implications"],
+        "answer": 0, "answerText": "symbolic",
+        "explanation": "Please go through lecture notes of week-2 (slide no.79) for better understanding."
+    },
+
+    # Week 3
+    {
+        "id": "2026-w3-q1", "year": "2026", "week": "Week 3",
+        "question": "The connections between nerves cells are called ___.",
+        "options": ["systems", "syntaxes", "neurons", "synapses"],
+        "answer": 3, "answerText": "synapses",
+        "explanation": "Please go through lecture notes of week-3 (slide no.02) for better understanding."
+    },
+    {
+        "id": "2026-w3-q2", "year": "2026", "week": "Week 3",
+        "question": "In order to create a ___, information must be changed into a usable form, which occurs through a process known as encoding.",
+        "options": ["past memory", "new imagination", "new memory", "past imagination"],
+        "answer": 2, "answerText": "new memory",
+        "explanation": "Please go through lecture notes of week-3 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2026-w3-q3", "year": "2026", "week": "Week 3",
+        "question": "Calling back the stored information in response to some cue for use in a process or activity is called ___.",
+        "options": ["Retrieval", "Recall", "Recollection", "All of the given"],
+        "answer": 3, "answerText": "All of the given",
+        "explanation": "Please go through lecture notes of week-3 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2026-w3-q4", "year": "2026", "week": "Week 3",
+        "question": "For many with ___ deficits, reading facial expressions and knowing how to respond are confusing daily challenges.",
+        "options": ["memory", "intelligence", "social cognition", "biological cognition"],
+        "answer": 2, "answerText": "social cognition",
+        "explanation": "Please go through lecture notes of week-3 (slide no.08) for better understanding."
+    },
+    {
+        "id": "2026-w3-q5", "year": "2026", "week": "Week 3",
+        "question": "The Information Processing View of Learning assumes that there are limits to how much information can be processed at each stage.",
+        "options": ["True", "False"],
+        "answer": 0, "answerText": "True",
+        "explanation": "Please go through lecture notes of week-3 (slide no.09) for better understanding."
+    },
+    {
+        "id": "2026-w3-q6", "year": "2026", "week": "Week 3",
+        "question": "The Information Processing View of Learning assumes that information process is involved in ___.",
+        "options": ["forgetting", "remembering", "perceiving", "All of the given"],
+        "answer": 3, "answerText": "All of the given",
+        "explanation": "Please go through lecture notes of week-3 (slide no.09) for better understanding."
+    },
+    {
+        "id": "2026-w3-q7", "year": "2026", "week": "Week 3",
+        "question": "The capacity of the sensory register is ___.",
+        "options": ["very small", "very large", "7+/-2 chunks", "unlimited"],
+        "answer": 1, "answerText": "very large",
+        "explanation": "Please go through lecture notes of week-3 (slide no.14) for better understanding."
+    },
+    {
+        "id": "2026-w3-q8", "year": "2026", "week": "Week 3",
+        "question": "Most children do not begin to engage in the process of rehearsal on their own until about age ___.",
+        "options": ["seven", "two", "thirteen", "one"],
+        "answer": 0, "answerText": "seven",
+        "explanation": "Please go through lecture notes of week-3 (slide no.16) for better understanding."
+    },
+    {
+        "id": "2026-w3-q9", "year": "2026", "week": "Week 3",
+        "question": "___ provides an interface between the sub-systems of working memory and the part of long term memory specialized for episodic memory.",
+        "options": ["Phonological loop", "Visuo-spatial sketchpad", "Retrieval buffer", "Episodic buffer"],
+        "answer": 3, "answerText": "Episodic buffer",
+        "explanation": "Please go through lecture notes of week-3 (slide no.27) for better understanding."
+    },
+    {
+        "id": "2026-w3-q10", "year": "2026", "week": "Week 3",
+        "question": "Memories of specific episodes of one’s life refers to ___.",
+        "options": ["declarative memory", "experimental episodic memory", "autobiographical episodic memory", "procedural memory"],
+        "answer": 2, "answerText": "autobiographical episodic memory",
+        "explanation": "Please go through lecture notes of week-3 (slide no.34) for better understanding."
+    },
+
+    # Week 4
+    {
+        "id": "2026-w4-q1", "year": "2026", "week": "Week 4",
+        "question": "___ thinking is the ability to create mental representations of objects, places, events, or people in your mind.",
+        "options": ["General", "Creative", "Divergent", "Symbolic"],
+        "answer": 3, "answerText": "Symbolic",
+        "explanation": "Please go through lecture notes of week-4 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2026-w4-q2", "year": "2026", "week": "Week 4",
+        "question": "We compare new information to our ___ of the person, place, or thing, so we know how to categorize the new information mentally.",
+        "options": ["protofit", "protobite", "prototype", "none of the given"],
+        "answer": 2, "answerText": "prototype",
+        "explanation": "Please go through lecture notes of week-4 (slide no.04) for better understanding."
+    },
+    {
+        "id": "2026-w4-q3", "year": "2026", "week": "Week 4",
+        "question": "Which of the following is not true?",
+        "options": ["Thinking is a higher mental process", "Thinking is a sub-vocal talking", "Thinking is fulfilling a need or problem solving", "Thinking is only done in verbal symbols"],
+        "answer": 3, "answerText": "Thinking is only done in verbal symbols",
+        "explanation": "Please go through lecture notes of week-4 (slide no.6) for better understanding."
+    },
+    {
+        "id": "2026-w4-q4", "year": "2026", "week": "Week 4",
+        "question": "Mental images are ___.",
+        "options": ["Auditory", "Visual", "Gustatory", "All of the given"],
+        "answer": 3, "answerText": "All of the given",
+        "explanation": "Please go through lecture notes of week-4 (slide no.07) for better understanding."
+    },
+    {
+        "id": "2026-w4-q5", "year": "2026", "week": "Week 4",
+        "question": "___ organize complex phenomena into simpler, easily understandable, and usable categories and help to solve our problems.",
+        "options": ["Concepts", "Propositions", "Constructs", "Components"],
+        "answer": 0, "answerText": "Concepts",
+        "explanation": "Please go through lecture notes of week-4 (slide no.08) for better understanding."
+    },
+    {
+        "id": "2026-w4-q6", "year": "2026", "week": "Week 4",
+        "question": "The lowermost level of Bloom’s taxonomy is ___.",
+        "options": ["remember", "apply", "understand", "analyze"],
+        "answer": 0, "answerText": "remember",
+        "explanation": "Please go through lecture notes of week-4 (slide no.13) for better understanding."
+    },
+    {
+        "id": "2026-w4-q7", "year": "2026", "week": "Week 4",
+        "question": "The psychomotor domain of the Bloom’s taxonomy is concerned with ___.",
+        "options": ["Biological makeup", "Thoughts and beliefs", "Feelings and emotions", "Skilled behavior"],
+        "answer": 3, "answerText": "Skilled behavior",
+        "explanation": "Please go through lecture notes of week-4 (slide no.17) for better understanding."
+    },
+    {
+        "id": "2026-w4-q8", "year": "2026", "week": "Week 4",
+        "question": "Which of the following is an example of meta-cognition skills?",
+        "options": ["Ignoring your limits", "Self-monitoring", "Skimming all important information", "All of the given"],
+        "answer": 1, "answerText": "Self-monitoring",
+        "explanation": "Please go through lecture notes of week-4 (slide no.24) for better understanding."
+    },
+    {
+        "id": "2026-w4-q9", "year": "2026", "week": "Week 4",
+        "question": "___ critical thinking skill helps you analyze and process information to come to an unbiased conclusion.",
+        "options": ["Open-mindedness", "Self-regulation", "Self-control", "Observation"],
+        "answer": 0, "answerText": "Open-mindedness",
+        "explanation": "Please go through lecture notes of week-4 (slide no.32) for better understanding."
+    },
+    {
+        "id": "2026-w4-q10", "year": "2026", "week": "Week 4",
+        "question": "The inspiration phase of the creative thinking process refers to the ___ stage.",
+        "options": ["Incubation", "Insight", "Evaluation", "Preparation"],
+        "answer": 3, "answerText": "Preparation",
+        "explanation": "Please go through lecture notes of week-4 (slide no.51) for better understanding."
+    },
+
+    # Week 5
+    {
+        "id": "2026-w5-q1", "year": "2026", "week": "Week 5",
+        "question": "Which of the following is true about motivation?",
+        "options": ["It is a physical impulse", "It is an external process", "It has a willingness to activate but not channel the attitudes of learners", "None of the given"],
+        "answer": 3, "answerText": "None of the given",
+        "explanation": "Please go through lecture notes of week-5 (slide no.02) for better understanding."
+    },
+    {
+        "id": "2026-w5-q2", "year": "2026", "week": "Week 5",
+        "question": "The term “motivation” comes from a ___ word.",
+        "options": ["Greek", "Latin", "Hindi", "Bengali"],
+        "answer": 1, "answerText": "Latin",
+        "explanation": "Please go through lecture notes of week-5 (slide no.04) for better understanding."
+    },
+    {
+        "id": "2026-w5-q3", "year": "2026", "week": "Week 5",
+        "question": "It is called extrinsic motivation if causal factor is ___.",
+        "options": ["curiosity", "social pressure", "self-satisfaction", "needs"],
+        "answer": 1, "answerText": "social pressure",
+        "explanation": "Please go through lecture notes of week-5 (slide no.5) for better understanding."
+    },
+    {
+        "id": "2026-w5-q4", "year": "2026", "week": "Week 5",
+        "question": "___ motivation is considered to be more crucial for students as it is associated with deep learning, better performance and self-efficacy.",
+        "options": ["Intrinsic", "Extrinsic", "Introjected regulation", "None of the given"],
+        "answer": 0, "answerText": "Intrinsic",
+        "explanation": "Please go through lecture notes of week-5 (slide no.7) for better understanding."
+    },
+    {
+        "id": "2026-w5-q5", "year": "2026", "week": "Week 5",
+        "question": "___ proposed that there are three primary drives that drive human behavior.",
+        "options": ["Hull", "Watson", "Piaget", "Gestalt"],
+        "answer": 0, "answerText": "Hull",
+        "explanation": "Please go through lecture notes of week-5 (slide no.12) for better understanding."
+    },
+    {
+        "id": "2026-w5-q6", "year": "2026", "week": "Week 5",
+        "question": "Expectancy Theory of Motivation was developed by ___.",
+        "options": ["Vroom", "Hull", "Murray", "None of the given"],
+        "answer": 0, "answerText": "Vroom",
+        "explanation": "Please go through lecture notes of week-5 (slide no.21) for better understanding."
+    },
+    {
+        "id": "2026-w5-q7", "year": "2026", "week": "Week 5",
+        "question": "An example of ___ is thinking, “If I work hard I can achieve the targets my boss has set for me”.",
+        "options": ["purposeful", "valence", "instrumentality", "expectancy"],
+        "answer": 3, "answerText": "expectancy",
+        "explanation": "Please go through lecture notes of week-5 (slide no.23) for better understanding."
+    },
+    {
+        "id": "2026-w5-q8", "year": "2026", "week": "Week 5",
+        "question": "In SMART goals, T stands for ___.",
+        "options": ["Temporary", "Time-based", "Tough", "Testing"],
+        "answer": 1, "answerText": "Time-based",
+        "explanation": "Please go through lecture notes of week-5 (slide no.27) for better understanding."
+    },
+    {
+        "id": "2026-w5-q9", "year": "2026", "week": "Week 5",
+        "question": "Friendship is a ___ need in Maslow’s hierarchy.",
+        "options": ["Love and belonging", "Esteem", "Physiological", "Safety"],
+        "answer": 0, "answerText": "Love and belonging",
+        "explanation": "Please go through lecture notes of week-5 (slide no.31-32) for better understanding."
+    },
+    {
+        "id": "2026-w5-q10", "year": "2026", "week": "Week 5",
+        "question": "___ theory differentiates between autonomous motivation and controlled motivation.",
+        "options": ["Arousal", "Goal-setting", "Need hierarchy", "Self-determination"],
+        "answer": 3, "answerText": "Self-determination",
+        "explanation": "Please go through lecture notes of week-5 (slide no.37) for better understanding."
+    },
+
+    # Week 6
+    {
+        "id": "2026-w6-q1", "year": "2026", "week": "Week 6",
+        "question": "According to Daniel Goleman, ___ component of emotional intelligence focuses on how we handle relationships with others.",
+        "options": ["self-awareness", "motivation", "empathy", "emotional regulation"],
+        "answer": 2, "answerText": "empathy",
+        "explanation": "Please go through lecture notes of week-6 (slide no.02) for better understanding."
+    },
+    {
+        "id": "2026-w6-q2", "year": "2026", "week": "Week 6",
+        "question": "Emotional intelligence can be considered a type of ___ intelligence.",
+        "options": ["academic", "genetic", "social", "external"],
+        "answer": 2, "answerText": "social",
+        "explanation": "Please go through lecture notes of week-6 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2026-w6-q3", "year": "2026", "week": "Week 6",
+        "question": "Noticing a difficult emotion and slowing down or resisting any impulsive action that may follow highlights ___ component of emotional intelligence.",
+        "options": ["Self-regulation", "Motivation", "Emotional literacy", "Empathy"],
+        "answer": 0, "answerText": "Self-regulation",
+        "explanation": "Please go through lecture notes of week-6 (slide no.04) for better understanding."
+    },
+    {
+        "id": "2026-w6-q4", "year": "2026", "week": "Week 6",
+        "question": "The following are signs of emotional intelligence, except ___.",
+        "options": ["strong sense of curiosity", "holding onto mistakes", "ability to manage emotions in difficult situations", "self-confidence"],
+        "answer": 1, "answerText": "holding onto mistakes",
+        "explanation": "Please go through lecture notes of week-6 (slide no.07) for better understanding."
+    },
+    {
+        "id": "2026-w6-q5", "year": "2026", "week": "Week 6",
+        "question": "Perceiving emotions means ___.",
+        "options": ["Ignoring signals", "Understanding only what somebody is saying to you", "Understanding only somebody’s facial expression", "Understanding both verbal and nonverbal signals"],
+        "answer": 3, "answerText": "Understanding both verbal and nonverbal signals",
+        "explanation": "Please go through lecture notes of week-6 (slide no.11) for better understanding."
+    },
+    {
+        "id": "2026-w6-q6", "year": "2026", "week": "Week 6",
+        "question": "___ suggests that 10 distinct components provide the scaffolding of emotionally and socially intelligent behaviors:",
+        "options": ["Bar-On", "Goleman", "Salovey", "Mayer"],
+        "answer": 0, "answerText": "Bar-On",
+        "explanation": "Please go through lecture notes of week-6 (slide no.15) for better understanding."
+    },
+    {
+        "id": "2026-w6-q7", "year": "2026", "week": "Week 6",
+        "question": "Which of the following is a facilitator of EQ?",
+        "options": ["optimism", "happiness", "independence", "all of the given"],
+        "answer": 3, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-6 (slide no.18) for better understanding."
+    },
+    {
+        "id": "2026-w6-q8", "year": "2026", "week": "Week 6",
+        "question": "___ is a strategy for improving one’s self-awareness.",
+        "options": ["rejecting feedback", "using critical self-talk daily", "developing a fixed mindset", "pursuing one’s passion"],
+        "answer": 3, "answerText": "pursuing one’s passion",
+        "explanation": "Please go through lecture notes of week-6 (slide no.20) for better understanding."
+    },
+    {
+        "id": "2026-w6-q9", "year": "2026", "week": "Week 6",
+        "question": "Having students create autobiographies is an example of creating opportunities for ___.",
+        "options": ["emotional labor", "emotional contagion", "metacognition", "none of the given"],
+        "answer": 2, "answerText": "metacognition",
+        "explanation": "Please go through lecture notes of week-6 (slide no.23) for better understanding."
+    },
+    {
+        "id": "2026-w6-q10", "year": "2026", "week": "Week 6",
+        "question": "Which of the following is not true about management of emotions?",
+        "options": ["It is essentially a private act", "It is directly regulated by others", "It is influenced by cultural norms", "It is influenced by what society defines as appropriate to feel and express"],
+        "answer": 1, "answerText": "It is directly regulated by others",
+        "explanation": "Please go through lecture notes of week-6 (slide no.30) for better understanding."
+    },
+
+    # Week 7 (July 2025 Assignment in Set 1)
+    {
+        "id": "2026-w7-q1", "year": "2026", "week": "Week 7",
+        "question": "Which of the following is false about learning according to Gagne’s definition?",
+        "options": ["It is a change in human disposition", "It persists over a period of time", "It is simply ascribable to processes of growth", "None of the above"],
+        "answer": 2, "answerText": "It is simply ascribable to processes of growth",
+        "explanation": "Please go through lecture notes of week-7 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2026-w7-q2", "year": "2026", "week": "Week 7",
+        "question": "Manual or physical skills come under ___ component of Bloom’s taxonomy.",
+        "options": ["Cognitive", "Affective", "Psychomotor", "Physical"],
+        "answer": 2, "answerText": "Psychomotor",
+        "explanation": "Please go through lecture notes of week-7 (slide no.04) for better understanding."
+    },
+    {
+        "id": "2026-w7-q3", "year": "2026", "week": "Week 7",
+        "question": "Reflection, learning and education was explored by ___.",
+        "options": ["Carl Rogers", "John Watson", "Benjamin Bloom", "John Dewey"],
+        "answer": 3, "answerText": "John Dewey",
+        "explanation": "Please go through lecture notes of week-7 (slide no.05) for better understanding."
+    },
+    {
+        "id": "2026-w7-q4", "year": "2026", "week": "Week 7",
+        "question": "The principles of ___ refer to how close in time two events must be for a bond to be formed.",
+        "options": ["behavior", "reinforcement", "repetition", "contiguity"],
+        "answer": 3, "answerText": "contiguity",
+        "explanation": "Please go through lecture notes of week-7 (slide no.6) for better understanding."
+    },
+    {
+        "id": "2026-w7-q5", "year": "2026", "week": "Week 7",
+        "question": "___ gives information to learners about their success or failure concerning the task at hand.",
+        "options": ["Cognitive feedback", "Emotional feedback", "Reinforcement", "Physical feedback"],
+        "answer": 0, "answerText": "Cognitive feedback",
+        "explanation": "Please go through lecture notes of week-7 (slide no.7) for better understanding."
+    },
+    {
+        "id": "2026-w7-q6", "year": "2026", "week": "Week 7",
+        "question": "The ___ orientation to learning has a quality of personal involvement—the whole person in both feeling and cognitive aspects being in the learning event.",
+        "options": ["behavioral", "cognitive", "humanistic", "social"],
+        "answer": 2, "answerText": "humanistic",
+        "explanation": "Please go through lecture notes of week-7 (slide no.8) for better understanding."
+    },
+    {
+        "id": "2026-w7-q7", "year": "2026", "week": "Week 7",
+        "question": "Learning through play is ___ learning.",
+        "options": ["primary", "secondary", "passive", "active"],
+        "answer": 3, "answerText": "active",
+        "explanation": "Please go through lecture notes of week-7 (slide no.15) for better understanding."
+    },
+    {
+        "id": "2026-w7-q8", "year": "2026", "week": "Week 7",
+        "question": "People with ___ learning style are prone to sorting their ideas after speaking, rather than thinking ideas through before.",
+        "options": ["logical", "solitary", "visual", "auditory"],
+        "answer": 3, "answerText": "auditory",
+        "explanation": "Please go through lecture notes of week-7 (slide no.17) for better understanding."
+    },
+    {
+        "id": "2026-w7-q9", "year": "2026", "week": "Week 7",
+        "question": "Which of the following statements is false?",
+        "options": ["Effective instruction is static", "Effective instruction is eclectic", "Effective instruction is generative", "Effective instruction is interactive"],
+        "answer": 0, "answerText": "Effective instruction is static",
+        "explanation": "Please go through lecture notes of week-7 (slide no.22) for better understanding."
+    },
+    {
+        "id": "2026-w7-q10", "year": "2026", "week": "Week 7",
+        "question": "In ADDIE model, I stand for ___.",
+        "options": ["instruction", "implementation", "integration", "induction"],
+        "answer": 1, "answerText": "implementation",
+        "explanation": "Please go through lecture notes of week-7 (slide no.33) for better understanding."
+    },
+
+    # Week 8
+    {
+        "id": "2026-w8-q1", "year": "2026", "week": "Week 8",
+        "question": "The word ‘pedagogy’ has been derived from the ___ word “pedagogue”.",
+        "options": ["Latin", "Sanskrit", "Greek", "English"],
+        "answer": 2, "answerText": "Greek",
+        "explanation": "Please go through lecture notes of week-8 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2026-w8-q2", "year": "2026", "week": "Week 8",
+        "question": "Which of the following statements is not true about pedagogy?",
+        "options": ["It is a method or way of teaching", "It is derived from the Greek word “pedagogue”", "It helps a teacher understand how learning should be facilitated.", "It harms the quality of teaching and learning."],
+        "answer": 3, "answerText": "It harms the quality of teaching and learning.",
+        "explanation": "Please go through lecture notes of week-8 (slide no.03-05) for better understanding."
+    },
+    {
+        "id": "2026-w8-q3", "year": "2026", "week": "Week 8",
+        "question": "Pedagogy can enhance the student-teacher relationship.",
+        "options": ["True", "False"],
+        "answer": 0, "answerText": "True",
+        "explanation": "Please go through lecture notes of week-8 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2026-w8-q4", "year": "2026", "week": "Week 8",
+        "question": "___ learning is based on the model that knowledge can be created within a population where members actively interact by sharing experiences and take on asymmetry roles.",
+        "options": ["integrative", "inquiry-based", "collaborative", "constructivist"],
+        "answer": 2, "answerText": "collaborative",
+        "explanation": "Please go through lecture notes of week-8 (slide no.06) for better understanding."
+    },
+    {
+        "id": "2026-w8-q5", "year": "2026", "week": "Week 8",
+        "question": "The Pedagogical Model provides an overview of the learning cycle and breaks it down into ___ domains or phases of instruction.",
+        "options": ["five", "three", "two", "seven"],
+        "answer": 0, "answerText": "five",
+        "explanation": "Please go through lecture notes of week-8 (slide no.09) for better understanding."
+    },
+    {
+        "id": "2026-w8-q6", "year": "2026", "week": "Week 8",
+        "question": "Which of the following is not a type of inquiry-based approach?",
+        "options": ["confrontation", "structure", "guided", "open"],
+        "answer": 0, "answerText": "confrontation",
+        "explanation": "Please go through lecture notes of week-8 (slide no.10) for better understanding."
+    },
+    {
+        "id": "2026-w8-q7", "year": "2026", "week": "Week 8",
+        "question": "In experiential learning, students are engaged ___.",
+        "options": ["intellectually", "soulfully", "socially", "all of the given"],
+        "answer": 3, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-8 (slide no.14) for better understanding."
+    },
+    {
+        "id": "2026-w8-q8", "year": "2026", "week": "Week 8",
+        "question": "___ stage of experiential theory by Kolb focuses on planning.",
+        "options": ["concrete experience", "abstract conceptualization", "reflective observation", "active experimentation"],
+        "answer": 3, "answerText": "active experimentation",
+        "explanation": "Please go through lecture notes of week-8 (slide no.21) for better understanding."
+    },
+    {
+        "id": "2026-w8-q9", "year": "2026", "week": "Week 8",
+        "question": "People with a ___ learning style can often act on “gut feeling” and will rely on others' analysis rather than their own.",
+        "options": ["accommodating", "converging", "diverging", "assimilating"],
+        "answer": 0, "answerText": "accommodating",
+        "explanation": "Please go through lecture notes of week-8 (slide no.25) for better understanding."
+    },
+    {
+        "id": "2026-w8-q10", "year": "2026", "week": "Week 8",
+        "question": "According to the ___ principle, students learn better from animation and narration than from animation and on-screen text.",
+        "options": ["multimedia", "modality", "coherence", "temporal contiguity"],
+        "answer": 1, "answerText": "modality",
+        "explanation": "Please go through lecture notes of week-8 (slide no.45) for better understanding."
+    },
+
+    # Week 9
+    {
+        "id": "2026-w9-q1", "year": "2026", "week": "Week 9",
+        "question": "E-learning is any form of ___.",
+        "options": ["teaching", "training", "tutoring", "all of the given"],
+        "answer": 3, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-9 (slide no.02) for better understanding."
+    },
+    {
+        "id": "2026-w9-q2", "year": "2026", "week": "Week 9",
+        "question": "___ is a feature of e-learning.",
+        "options": ["difficulty in access", "user friendliness", "social injustice", "closed learning"],
+        "answer": 1, "answerText": "user friendliness",
+        "explanation": "Please go through lecture notes of week-9 (slide no.02) for better understanding."
+    },
+    {
+        "id": "2026-w9-q3", "year": "2026", "week": "Week 9",
+        "question": "E-learning is a synonym of audio-visual learning, multimedia learning, and distance learning.",
+        "options": ["True", "False"],
+        "answer": 1, "answerText": "False",
+        "explanation": "Please go through lecture notes of week-9 (slide no.05) for better understanding."
+    },
+    {
+        "id": "2026-w9-q4", "year": "2026", "week": "Week 9",
+        "question": "Which of the following is not a type of e-learning?",
+        "options": ["text-driven", "interactive", "simulation", "physical"],
+        "answer": 3, "answerText": "physical",
+        "explanation": "Please go through lecture notes of week-9 (slide no.05-06) for better understanding."
+    },
+    {
+        "id": "2026-w9-q5", "year": "2026", "week": "Week 9",
+        "question": "Which of the following is not a benefit of e-learning?",
+        "options": ["It can accommodate the need of a housewife", "People can revise the learning content as many times as they want", "It facilitates in developing and communicating new training policies", "None of the given"],
+        "answer": 3, "answerText": "None of the given",
+        "explanation": "Please go through lecture notes of week-9 (slide no.06) for better understanding."
+    },
+    {
+        "id": "2026-w9-q6", "year": "2026", "week": "Week 9",
+        "question": "Good learners know ___.",
+        "options": ["What they are learning", "Why they are learning", "How they are learning", "All of the given"],
+        "answer": 3, "answerText": "All of the given",
+        "explanation": "Please go through lecture notes of week-9 (slide no.12) for better understanding."
+    },
+    {
+        "id": "2026-w9-q7", "year": "2026", "week": "Week 9",
+        "question": "Learners may multitask when engaging in an online course, which could be resulting in ___.",
+        "options": ["hyperfocus", "better retrieval", "shorter attention spans", "None of the given"],
+        "answer": 2, "answerText": "shorter attention spans",
+        "explanation": "Please go through lecture notes of week-9 (slide no.19) for better understanding."
+    },
+    {
+        "id": "2026-w9-q8", "year": "2026", "week": "Week 9",
+        "question": "___ learning is the crucial determinant of successful e-learning.",
+        "options": ["passive", "retrospective", "social", "active"],
+        "answer": 3, "answerText": "active",
+        "explanation": "Please go through lecture notes of week-9 (slide no.13) for better understanding."
+    },
+    {
+        "id": "2026-w9-q9", "year": "2026", "week": "Week 9",
+        "question": "The brain can process 36,000 visual cues per___.",
+        "options": ["hour", "second", "day", "year"],
+        "answer": 0, "answerText": "hour",
+        "explanation": "Please go through lecture notes of week-9 (slide no.14) for better understanding."
+    },
+    {
+        "id": "2026-w9-q10", "year": "2026", "week": "Week 9",
+        "question": "For effective learning, online courses should ___.",
+        "options": ["use headings", "use complex language", "present long pieces of text", "use random images"],
+        "answer": 0, "answerText": "use headings",
+        "explanation": "Please go through lecture notes of week-9 (slide no.20) for better understanding."
+    },
+
+    # Week 10
+    {
+        "id": "2026-w10-q1", "year": "2026", "week": "Week 10",
+        "question": "During Covid-19 the world was busy in preparing 1.5 billion learners for the new normal, i.e., ___ learning.",
+        "options": ["ineffective", "physical", "remote", "experiential"],
+        "answer": 2, "answerText": "remote",
+        "explanation": "Please go through lecture notes of week-10 (slide no.02) for better understanding."
+    },
+    {
+        "id": "2026-w10-q2", "year": "2026", "week": "Week 10",
+        "question": "To develop learner readiness for online learning, training sessions on ___ are helpful.",
+        "options": ["netiquettes", "time management", "developing study skills", "all of the given"],
+        "answer": 3, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-10 (slide no.04) for better understanding."
+    },
+    {
+        "id": "2026-w10-q3", "year": "2026", "week": "Week 10",
+        "question": "The typical picture of a teacher being a dispenser of knowledge to the students has been replaced by that of a ___.",
+        "options": ["obstructor", "parent", "friend", "facilitator"],
+        "answer": 3, "answerText": "facilitator",
+        "explanation": "Please go through lecture notes of week-10 (slide no.06) for better understanding."
+    },
+    {
+        "id": "2026-w10-q4", "year": "2026", "week": "Week 10",
+        "question": "In 2018, Global Education and Skills Forum noted that the ‘future’ teacher would need the 5 skills to thrive in the 21st century. Which of the following is not one of them?",
+        "options": ["Strong social skills", "Data analysis", "External focus", "Strictness"],
+        "answer": 3, "answerText": "Strictness",
+        "explanation": "Please go through lecture notes of week-10 (slide no.06) for better understanding."
+    },
+    {
+        "id": "2026-w10-q5", "year": "2026", "week": "Week 10",
+        "question": "Participatory education demands ___ so as to build a needs-based approach to teaching.",
+        "options": ["creativity", "stubbornness", "reward", "none of the given"],
+        "answer": 0, "answerText": "creativity",
+        "explanation": "Please go through lecture notes of week-10 (slide no.08) for better understanding."
+    },
+    {
+        "id": "2026-w10-q6", "year": "2026", "week": "Week 10",
+        "question": "Students who consider intelligence as a malleable entity tend to focus on their obstacles instead of goals.",
+        "options": ["True", "False"],
+        "answer": 1, "answerText": "False",
+        "explanation": "Please go through lecture notes of week-10 (slide no.10) for better understanding."
+    },
+    {
+        "id": "2026-w10-q7", "year": "2026", "week": "Week 10",
+        "question": "Which of the following is not a principle to enhance student learning.",
+        "options": [
+            "What students already know affects their learning",
+            "Learning is context-based",
+            "Students’ cognitive development and learning is limited by the general stages of development.",
+            "The acquisition of knowledge and skills in the long term depends largely on practice."
+        ],
+        "answer": 2, "answerText": "Students’ cognitive development and learning is limited by the general stages of development.",
+        "explanation": "Please go through lecture notes of week-10 (slide no.10-11) for better understanding."
+    },
+    {
+        "id": "2026-w10-q8", "year": "2026", "week": "Week 10",
+        "question": "___ feedback to students is important for learning.",
+        "options": ["Unclear", "Late", "Harsh", "Explanatory"],
+        "answer": 3, "answerText": "Explanatory",
+        "explanation": "Please go through lecture notes of week-10 (slide no.14) for better understanding."
+    },
+    {
+        "id": "2026-w10-q9", "year": "2026", "week": "Week 10",
+        "question": "Mastery goals are those that are geared towards the acquisition or improvement of___.",
+        "options": ["Skills", "Number of students in a classroom", "Teacher feedback", "None of the given"],
+        "answer": 0, "answerText": "Skills",
+        "explanation": "Please go through lecture notes of week-10 (slide no.15) for better understanding."
+    },
+    {
+        "id": "2026-w10-q10", "year": "2026", "week": "Week 10",
+        "question": "The vast majority of formative assessment is___.",
+        "options": ["Formal", "Incorrect", "Written", "informal"],
+        "answer": 3, "answerText": "informal",
+        "explanation": "Please go through lecture notes of week-10 (slide no.44) for better understanding."
+    },
+
+    # Week 11
+    {
+        "id": "2026-w11-q1", "year": "2026", "week": "Week 11",
+        "question": "Social cognition has a protracted development through infancy to ___.",
+        "options": ["teenage", "old-age", "adulthood", "death"],
+        "answer": 2, "answerText": "adulthood",
+        "explanation": "Please go through lecture notes of week-11 (slide no.02) for better understanding."
+    },
+    {
+        "id": "2026-w11-q2", "year": "2026", "week": "Week 11",
+        "question": "Which of the following abilities comes under social cognition?",
+        "options": ["Face processing", "Joint attention", "Theory of mind", "All of the given"],
+        "answer": 3, "answerText": "All of the given",
+        "explanation": "Please go through lecture notes of week-11 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2026-w11-q3", "year": "2026", "week": "Week 11",
+        "question": "Under social cognition, abilities involved in affective processing are often called ___.",
+        "options": ["hot", "cold", "white", "black"],
+        "answer": 0, "answerText": "hot",
+        "explanation": "Please go through lecture notes of week-11 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2026-w11-q4", "year": "2026", "week": "Week 11",
+        "question": "Social schemas refer to people's mental representations of social ___.",
+        "options": ["values", "memories", "skills", "patterns"],
+        "answer": 3, "answerText": "patterns",
+        "explanation": "Please go through lecture notes of week-11 (slide no.05) for better understanding."
+    },
+    {
+        "id": "2026-w11-q5", "year": "2026", "week": "Week 11",
+        "question": "During the earliest stages of development, children are very ___-centric. They see the world from their own perspective and struggle to think about how other people may view the world.",
+        "options": ["selfish", "ego", "conscious", "emotional"],
+        "answer": 1, "answerText": "ego",
+        "explanation": "Please go through lecture notes of week-11 (slide no.06) for better understanding."
+    },
+    {
+        "id": "2026-w11-q6", "year": "2026", "week": "Week 11",
+        "question": "A theory of mind refers to a person's ability to understand and think about the ___ of other people.",
+        "options": ["behaviors", "family backgrounds", "mental states", "language"],
+        "answer": 2, "answerText": "mental states",
+        "explanation": "Please go through lecture notes of week-11 (slide no.08) for better understanding."
+    },
+    {
+        "id": "2026-w11-q7", "year": "2026", "week": "Week 11",
+        "question": "The same social behavior in one cultural setting might have a very different meaning and interpretation if it were to occur or be observed in another culture.",
+        "options": ["True", "False"],
+        "answer": 0, "answerText": "True",
+        "explanation": "Please go through lecture notes of week-11 (slide no.09) for better understanding."
+    },
+    {
+        "id": "2026-w11-q8", "year": "2026", "week": "Week 11",
+        "question": "Social cognitive theory by Bandura focuses on concepts of ___.",
+        "options": ["self-efficacy", "modeling", "observational learning", "all of the given"],
+        "answer": 3, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-11 (slide no.11) for better understanding."
+    },
+    {
+        "id": "2026-w11-q9", "year": "2026", "week": "Week 11",
+        "question": "The central tenet of Bandura’s social-cognitive theory is that people seek to develop a sense of ___ over the important events in their lives.",
+        "options": ["agency", "dependency", "attachment", "emotion"],
+        "answer": 0, "answerText": "agency",
+        "explanation": "Please go through lecture notes of week-11 (slide no.13) for better understanding."
+    },
+    {
+        "id": "2026-w11-q10", "year": "2026", "week": "Week 11",
+        "question": "___ hypothesis suggests that social processes influence how information is selected, organized, integrated, and retrieved.",
+        "options": ["activation", "cognitive influence", "interaction", "social cue strength"],
+        "answer": 1, "answerText": "cognitive influence",
+        "explanation": "Please go through lecture notes of week-11 (slide no.30) for better understanding."
+    },
+
+    # Week 12
+    {
+        "id": "2026-w12-q1", "year": "2026", "week": "Week 12",
+        "question": "Sustainability in economic sustainability is ___.",
+        "options": ["multidimensional", "bidimensional", "unidimensional", "none of the given"],
+        "answer": 2, "answerText": "unidimensional",
+        "explanation": "Please go through lecture notes of week-12 (slide no.02) for better understanding."
+    },
+    {
+        "id": "2026-w12-q2", "year": "2026", "week": "Week 12",
+        "question": "The term \"sustainable development\" was first mentioned in a book related to the 1972 UN Stockholm conference on ___.",
+        "options": ["water", "poverty", "economic crisis", "human environment"],
+        "answer": 3, "answerText": "human environment",
+        "explanation": "Please go through lecture notes of week-12 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2026-w12-q3", "year": "2026", "week": "Week 12",
+        "question": "Environmental sustainability focuses on impacts of processes, products and services on ___.",
+        "options": ["water", "biodiversity", "human health", "all of the given"],
+        "answer": 3, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-12 (slide no.05) for better understanding."
+    },
+    {
+        "id": "2026-w12-q4", "year": "2026", "week": "Week 12",
+        "question": "Which of the following does not come under social sustainability?",
+        "options": ["Labour practices", "Revenue generation", "Human rights", "Business ethics"],
+        "answer": 1, "answerText": "Revenue generation",
+        "explanation": "Please go through lecture notes of week-12 (slide no.06-07) for better understanding."
+    },
+    {
+        "id": "2026-w12-q5", "year": "2026", "week": "Week 12",
+        "question": "SDG __ focuses on clean water and sanitation.",
+        "options": ["1", "17", "6", "3"],
+        "answer": 2, "answerText": "6",
+        "explanation": "Please go through lecture notes of week-12 (slide no.09) for better understanding."
+    },
+    {
+        "id": "2026-w12-q6", "year": "2026", "week": "Week 12",
+        "question": "SDG 16 focuses on ___.",
+        "options": ["No poverty", "No hunger", "Good health", "Peace and justice"],
+        "answer": 3, "answerText": "Peace and justice",
+        "explanation": "Please go through lecture notes of week-12 (slide no.09) for better understanding."
+    },
+    {
+        "id": "2026-w12-q7", "year": "2026", "week": "Week 12",
+        "question": "On 20 October 2020, the Higher Education Sustainability Initiative (HESI) raised the flag of higher education as a driver for sustainable development and inclusive societies on the first day of the ___ 2020.",
+        "options": ["National Sustainability Meeting", "National Teachers Meeting", "Global Childrens’ Meeting", "Global Education Meeting"],
+        "answer": 3, "answerText": "Global Education Meeting",
+        "explanation": "Please go through lecture notes of week-12 (slide no.14) for better understanding."
+    },
+    {
+        "id": "2026-w12-q8", "year": "2026", "week": "Week 12",
+        "question": "Education is related to all SDGs.",
+        "options": ["True", "False"],
+        "answer": 0, "answerText": "True",
+        "explanation": "Please go through lecture notes of week-12 (slide no.24) for better understanding."
+    },
+    {
+        "id": "2026-w12-q9", "year": "2026", "week": "Week 12",
+        "question": "Successful implementation of ESD requires a shift in focus from ___.",
+        "options": ["teaching to learning", "learning to teaching", "reading to speaking", "knowing to ignoring"],
+        "answer": 0, "answerText": "teaching to learning",
+        "explanation": "Please go through lecture notes of week-12 (slide no.29) for better understanding."
+    },
+    {
+        "id": "2026-w12-q10", "year": "2026", "week": "Week 12",
+        "question": "___ competency is the ability to reflect on one’s own role in the local community and (global) society.",
+        "options": ["collaboration", "self-awareness", "strategic", "normative"],
+        "answer": 1, "answerText": "self-awareness",
+        "explanation": "Please go through lecture notes of week-12 (slide no.62) for better understanding."
+    }
+]
+
+print(f"2026 count: {len(data)}")
+with open('data_2026.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, indent=2)

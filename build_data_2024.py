@@ -1,0 +1,926 @@
+# Dataset compiler for 2024
+import json
+
+data = [
+    # ==========================================
+    # YEAR 2024 (July 2024)
+    # ==========================================
+    # Week 0
+    {
+        "id": "2024-w0-q1", "year": "2024", "week": "Week 0",
+        "question": "What is Psychology?",
+        "options": ["A Science subject", "Is objective perception", "An art of living", "A thought process", "A study of cognitive processes & behavior"],
+        "answer": 4, "answerText": "A study of cognitive processes & behavior",
+        "explanation": ""
+    },
+    {
+        "id": "2024-w0-q2", "year": "2024", "week": "Week 0",
+        "question": "A broad field of study that explores a variety of questions about thoughts, feelings and actions is -------?",
+        "options": ["Society", "Globalization", "Psychology", "Social Science", "Human Development"],
+        "answer": 2, "answerText": "Psychology",
+        "explanation": ""
+    },
+    {
+        "id": "2024-w0-q3", "year": "2024", "week": "Week 0",
+        "question": "A systematic assessment that provides information on political views, consumer buying habits and many other topics is called ---------------?",
+        "options": ["Standardized test.", "Projects", "Experiments", "Survey", "Psychological tests"],
+        "answer": 3, "answerText": "Survey",
+        "explanation": ""
+    },
+    {
+        "id": "2024-w0-q4", "year": "2024", "week": "Week 0",
+        "question": "The word Psyche means -------------- ?",
+        "options": ["Body or physique", "Mind or soul", "Science & spirituality", "Mental health", "Neuropsychology"],
+        "answer": 1, "answerText": "Mind or soul",
+        "explanation": ""
+    },
+    {
+        "id": "2024-w0-q5", "year": "2024", "week": "Week 0",
+        "question": "Who established psychology laboratory in Germany?",
+        "options": ["B.F. Skinner", "J. Thorndike", "Sigmund Freud", "David Kolb", "Wilhelm Wundt"],
+        "answer": 4, "answerText": "Wilhelm Wundt",
+        "explanation": ""
+    },
+    {
+        "id": "2024-w0-q6", "year": "2024", "week": "Week 0",
+        "question": "“To help people to function effectively and fulfill their own unique potential” is the aim of------------?",
+        "options": ["Humanistic psychology", "Social Psychiatry", "Philosophy", "Development studies", "Sustainable development"],
+        "answer": 0, "answerText": "Humanistic psychology",
+        "explanation": ""
+    },
+    {
+        "id": "2024-w0-q7", "year": "2024", "week": "Week 0",
+        "question": "Behaviorists use a learning process to change abnormal behavior is called ------------ ?",
+        "options": ["Rationalism", "Experiential intervention", "Gestalt mechanism", "Hypotheses verification", "Conditioning"],
+        "answer": 4, "answerText": "Conditioning",
+        "explanation": ""
+    },
+    {
+        "id": "2024-w0-q8", "year": "2024", "week": "Week 0",
+        "question": "The study of changes in behavior during life time is called-----------.",
+        "options": ["Behaviorism", "Individual difference", "Developmental Psychology", "Maturational theory", "Genetics or Heredity"],
+        "answer": 2, "answerText": "Developmental Psychology",
+        "explanation": ""
+    },
+    {
+        "id": "2024-w0-q9", "year": "2024", "week": "Week 0",
+        "question": "The study of differences and similarities in the behavior of animals of different species is called .",
+        "options": ["Sociology", "Social work", "Rehabilitation studies", "Comparative Psychology", "Cultural Psychology"],
+        "answer": 3, "answerText": "Comparative Psychology",
+        "explanation": ""
+    },
+
+    # Week 1
+    {
+        "id": "2024-w1-q1", "year": "2024", "week": "Week 1",
+        "question": "Which of the following is true regarding learning in psychology?",
+        "options": [
+            "The psychology of learning focuses on how people learn and how they interact with the environments in which they have not learnt",
+            "Learning does not involve any changes in the organism",
+            "Learning is a relatively temporary change in behavior",
+            "none of the given"
+        ],
+        "answer": 3, "answerText": "none of the given",
+        "explanation": "Please go through lecture notes of week-1 (slide no.02) for better understanding."
+    },
+    {
+        "id": "2024-w1-q2", "year": "2024", "week": "Week 1",
+        "question": "In order to say that learning has occurred, a/an must occur during the lifetime of the organism.",
+        "options": ["hidden change in behavior", "small change in personality", "visible change in emotions", "observable change in behavior"],
+        "answer": 3, "answerText": "observable change in behavior",
+        "explanation": "Please go through lecture notes of week-1 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2024-w1-q3", "year": "2024", "week": "Week 1",
+        "question": "Learning changes the through the process of continuous interactions between the learner and the external environment.",
+        "options": ["physical structure of the brain", "chemical structure of neurons", "physical structure of the heart", "chemical structure of the spinal cord"],
+        "answer": 0, "answerText": "physical structure of the brain",
+        "explanation": "Please go through lecture notes of week-1 (slide no.04) for better understanding."
+    },
+    {
+        "id": "2024-w1-q4", "year": "2024", "week": "Week 1",
+        "question": "Watson, one of the first psychologists to study learning and behavior is known for the .",
+        "options": ["Little Albert experiment", "Little John experiment", "Little Robert experiment", "Little Johnny experiment"],
+        "answer": 0, "answerText": "Little Albert experiment",
+        "explanation": "Please go through lecture notes of week-1 (slide no.08) for better understanding."
+    },
+    {
+        "id": "2024-w1-q5", "year": "2024", "week": "Week 1",
+        "question": "Which of the following is not explored and described by the psychology of learning?",
+        "options": ["principles of motivation", "principles of forgetting", "principles of genetic disorders", "principles of memory", "principles of retention"],
+        "answer": 2, "answerText": "principles of genetic disorders",
+        "explanation": "Please go through lecture notes of week-1 (slide no.09) for better understanding."
+    },
+    {
+        "id": "2024-w1-q6", "year": "2024", "week": "Week 1",
+        "question": "The state of may be valuable at the start of a learning experience.",
+        "options": ["conscious incompetence", "unconscious incompetence", "conscious over-competence", "unconscious over-competence"],
+        "answer": 0, "answerText": "conscious incompetence",
+        "explanation": "Please go through lecture notes of week-1 (slide no.11) for better understanding."
+    },
+    {
+        "id": "2024-w1-q7", "year": "2024", "week": "Week 1",
+        "question": "___ is the decrease in the response that an organism gives to a stimulus to which it is exposed in numerous trials or occasions.",
+        "options": ["Habituation", "Sensitization", "Forgetting", "Meaningful learning"],
+        "answer": 0, "answerText": "Habituation",
+        "explanation": "Please go through lecture notes of week-1 (slide no.23) for better understanding."
+    },
+    {
+        "id": "2024-w1-q8", "year": "2024", "week": "Week 1",
+        "question": "Cooperative learning is shaped by three crucial elements. Which of the following is one of them?",
+        "options": ["formation of heterogeneous groups", "positive interdependence", "individual responsibility", "all of the given"],
+        "answer": 3, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-1 (slide no.26-27) for better understanding."
+    },
+    {
+        "id": "2024-w1-q9", "year": "2024", "week": "Week 1",
+        "question": "Which of the following psychologists is an important contributor to the concept of observational learning?",
+        "options": ["Watson", "Dewey", "Bruner", "Bandura"],
+        "answer": 3, "answerText": "Bandura",
+        "explanation": "Please go through lecture notes of week-1 (slide no.28) for better understanding."
+    },
+    {
+        "id": "2024-w1-q10", "year": "2024", "week": "Week 1",
+        "question": "Which of the following is not considered a pioneer of the behaviorism school of thought in psychology?",
+        "options": ["Watson", "Skinner", "Freud", "Pavlov"],
+        "answer": 2, "answerText": "Freud",
+        "explanation": "Please go through lecture notes of week-1 (slide no.37) for better understanding."
+    },
+
+    # Week 2
+    {
+        "id": "2024-w2-q1", "year": "2024", "week": "Week 2",
+        "question": "___ is known as the father of modern psychology.",
+        "options": ["Sigmund Freud", "Wilhelm Wundt", "John Watson", "Lev Vygotsky"],
+        "answer": 1, "answerText": "Wilhelm Wundt",
+        "explanation": "Please go through lecture notes of week-2 (slide no.33) for better understanding."
+    },
+    {
+        "id": "2024-w2-q2", "year": "2024", "week": "Week 2",
+        "question": "Cognitivists objected to behaviorists because they felt that behaviorists ignored the important role of .",
+        "options": ["genetics", "emotions", "thinking", "stimulus reaction"],
+        "answer": 2, "answerText": "thinking",
+        "explanation": "Please go through lecture notes of week-2 (slide no.35) for better understanding."
+    },
+    {
+        "id": "2024-w2-q3", "year": "2024", "week": "Week 2",
+        "question": "___ is viewed as the mainstream for all research on learning designs.",
+        "options": ["Psychoanalysis", "Positive psychology", "Cognitivism", "Evolutionary psychology"],
+        "answer": 2, "answerText": "Cognitivism",
+        "explanation": "Please go through lecture notes of week-2 (slide no.37) for better understanding."
+    },
+    {
+        "id": "2024-w2-q4", "year": "2024", "week": "Week 2",
+        "question": "___ is a perspective in psychology focusing on the belief that human consciousness cannot be broken down into its elements and is based on the concept of a ‘whole’.",
+        "options": ["Cognitivism", "Behaviorism", "Gestalt psychology", "Positive psychology"],
+        "answer": 2, "answerText": "Gestalt psychology",
+        "explanation": "Please go through lecture notes of week-2 (slide no.40) for better understanding."
+    },
+    {
+        "id": "2024-w2-q5", "year": "2024", "week": "Week 2",
+        "question": "Theory of multiple intelligences is given by .",
+        "options": ["Howard Gardner", "Edward C. Tolman", "German Gestalt", "Robert J. Sternberg"],
+        "answer": 0, "answerText": "Howard Gardner",
+        "explanation": "Please go through lecture notes of week-2 (slide no.46-49) for better understanding."
+    },
+    {
+        "id": "2024-w2-q6", "year": "2024", "week": "Week 2",
+        "question": "The general intelligence factor, also known as g, is what intelligence tests typically measure and refers only to intelligence.",
+        "options": ["academic", "practical", "linguistic", "kinesthetic"],
+        "answer": 0, "answerText": "academic",
+        "explanation": "Please go through lecture notes of week-2 (slide no.51) for better understanding."
+    },
+    {
+        "id": "2024-w2-q7", "year": "2024", "week": "Week 2",
+        "question": "Cognitive evaluation for planning, attention, simultaneous, and successive processing of individuals can be done through CAS based on PASS theory. CAS here stands for ___.",
+        "options": ["Cognitive Achievement System", "Cognitive Ability System", "Cognitive Appraisal System", "Cognitive Assessment System"],
+        "answer": 3, "answerText": "Cognitive Assessment System",
+        "explanation": "Please go through lecture notes of week-2 (slide no.64) for better understanding."
+    },
+    {
+        "id": "2024-w2-q8", "year": "2024", "week": "Week 2",
+        "question": "BBL is a new science that shapes the learning process and is an approach that is based on the structure and function of the human brain. BBL stands for .",
+        "options": ["Biological based learning", "Brain based learning", "Biological battery learning", "Brain biology learning"],
+        "answer": 1, "answerText": "Brain based learning",
+        "explanation": "Please go through lecture notes of week-2 (slide no.70) for better understanding."
+    },
+    {
+        "id": "2024-w2-q9", "year": "2024", "week": "Week 2",
+        "question": "Gagne’s Conditions of Learning is also known as ___ Events of Instruction.",
+        "options": ["nine", "five", "ten", "seven"],
+        "answer": 0, "answerText": "nine",
+        "explanation": "Please go through lecture notes of week-2 (slide no.81-83) for better understanding."
+    },
+    {
+        "id": "2024-w2-q10", "year": "2024", "week": "Week 2",
+        "question": "Which of the following is not a type of constructivism?",
+        "options": ["biological", "cognitive", "social", "radical"],
+        "answer": 0, "answerText": "biological",
+        "explanation": "Please go through lecture notes of week-2 (slide no.95-97) for better understanding."
+    },
+
+    # Week 3
+    {
+        "id": "2024-w3-q1", "year": "2024", "week": "Week 3",
+        "question": "Which of the following is not one of the three major processes involved in memory?",
+        "options": ["encoding", "retrieval", "storage", "imagination"],
+        "answer": 3, "answerText": "imagination",
+        "explanation": "Please go through lecture notes of week-3 (slide no.02) for better understanding."
+    },
+    {
+        "id": "2024-w3-q2", "year": "2024", "week": "Week 3",
+        "question": "___ refers to changing information into a usable form.",
+        "options": ["Storage", "Recall", "Encoding", "Recollection", "Forgetting"],
+        "answer": 2, "answerText": "Encoding",
+        "explanation": "Please go through lecture notes of week-3 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2024-w3-q3", "year": "2024", "week": "Week 3",
+        "question": "___ refers to a range of mental processes relating to the acquisition, storage, manipulation and retrieval of information.",
+        "options": ["Cognition", "Construction", "Encoding", "Thinking"],
+        "answer": 0, "answerText": "Cognition",
+        "explanation": "Please go through lecture notes of week-3 (slide no.06-) for better understanding."
+    },
+    {
+        "id": "2024-w3-q4", "year": "2024", "week": "Week 3",
+        "question": "Which of the following is a challenge faced by people with social cognition deficits?",
+        "options": ["talking too much to people", "responding to well to people", "difficulty in reading facial expressions", "difficulty in getting good academic scores"],
+        "answer": 2, "answerText": "difficulty in reading facial expressions",
+        "explanation": "Please go through lecture notes of week-3 (slide no.08) for better understanding."
+    },
+    {
+        "id": "2024-w3-q5", "year": "2024", "week": "Week 3",
+        "question": "Which of the following is not true about the assumptions underlying the Information Processing View of Learning?",
+        "options": [
+            "Information processing is analogous to computer processing",
+            "The human information processing system is interactive",
+            "There is no limit on how much information can be processed at each stage",
+            "Information is processed in steps"
+        ],
+        "answer": 2, "answerText": "There is no limit on how much information can be processed at each stage",
+        "explanation": "Please go through lecture notes of week-3 (slide no.09) for better understanding."
+    },
+    {
+        "id": "2024-w3-q6", "year": "2024", "week": "Week 3",
+        "question": "___ prevents the quick disappearance of information from short term memory",
+        "options": ["Rehearsal", "Encoding", "Retrieval", "None of the given"],
+        "answer": 0, "answerText": "Rehearsal",
+        "explanation": "Please go through lecture notes of week-3 (slide no.15) for better understanding."
+    },
+    {
+        "id": "2024-w3-q7", "year": "2024", "week": "Week 3",
+        "question": "The Multicomponent Model of Working Memory is largely attributed to the work by",
+        "options": ["Atkinson & Shiffrin", "Baddeley", "Piaget", "Craik & Lockhart"],
+        "answer": 1, "answerText": "Baddeley",
+        "explanation": "Please go through lecture notes of week-3 (slide no.24-30) for better understanding."
+    },
+    {
+        "id": "2024-w3-q8", "year": "2024", "week": "Week 3",
+        "question": "___ memory refers to the events that can be reported from a person’s life.",
+        "options": ["Episodic", "Semantic", "Procedural", "None of the given"],
+        "answer": 0, "answerText": "Episodic",
+        "explanation": "Please go through lecture notes of week-3 (slide no.34) for better understanding."
+    },
+    {
+        "id": "2024-w3-q9", "year": "2024", "week": "Week 3",
+        "question": "The memory capacity depends on which of the following?",
+        "options": ["complexity of the synapses", "spatial and temporal correlations between memories", "specific way memories are retrieved", "all of the given"],
+        "answer": 3, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-3 (slide no.41) for better understanding."
+    },
+    {
+        "id": "2024-w3-q10", "year": "2024", "week": "Week 3",
+        "question": "Which of the following is not one of the three measurable dimensions of cognitive load?",
+        "options": ["mental effort", "mental load", "physical effort", "performance"],
+        "answer": 2, "answerText": "physical effort",
+        "explanation": "Please go through lecture notes of week-3 (slide no.46-49) for better understanding."
+    },
+
+    # Week 4
+    {
+        "id": "2024-w4-q1", "year": "2024", "week": "Week 4",
+        "question": "The three main types of thinking in psychology include the following except .",
+        "options": ["symbolic", "creative", "divergent", "convergent"],
+        "answer": 3, "answerText": "convergent",
+        "explanation": "Please go through lecture notes of week-4 (slide no.02) for better understanding."
+    },
+    {
+        "id": "2024-w4-q2", "year": "2024", "week": "Week 4",
+        "question": "Young children engaging in imaginative play often engage in thinking.",
+        "options": ["creative", "divergent", "symbolic", "convergent"],
+        "answer": 2, "answerText": "symbolic",
+        "explanation": "Please go through lecture notes of week-4 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2024-w4-q3", "year": "2024", "week": "Week 4",
+        "question": "Which of the following is a way in which we think?",
+        "options": ["in verbal symbols", "in mathematical symbols", "in gestures and movements", "all of the given"],
+        "answer": 3, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-4 (slide no.6) for better understanding."
+    },
+    {
+        "id": "2024-w4-q4", "year": "2024", "week": "Week 4",
+        "question": "People experience the ___ experience when they find the solution to a problem suddenly that had been in their mind for hours or days, late.",
+        "options": ["\"oh no\"", "\"wow\"", "\"aha\"", "none of the given"],
+        "answer": 2, "answerText": "\"aha\"",
+        "explanation": "Please go through lecture notes of week-4 (slide no.07) for better understanding."
+    },
+    {
+        "id": "2024-w4-q5", "year": "2024", "week": "Week 4",
+        "question": "___ knowledge refers to knowledge of terminology and specific details.",
+        "options": ["factual", "conceptual", "procedural", "metacognitive"],
+        "answer": 0, "answerText": "factual",
+        "explanation": "Please go through lecture notes of week-4 (slide no.19) for better understanding."
+    },
+    {
+        "id": "2024-w4-q6", "year": "2024", "week": "Week 4",
+        "question": "Which of the following is not true about metacognition?",
+        "options": [
+            "allows people to be dependent on others for their learning",
+            "often referred to as “thinking about thinking”",
+            "is crucial for efficient independent learning because it fosters self-reflection",
+            "is a regulatory system that helps a person understand and control his or her own cognitive performance",
+            "Metacognition"
+        ],
+        "answer": 0, "answerText": "allows people to be dependent on others for their learning",
+        "explanation": "Please go through lecture notes of week-4 (slide no.23) for better understanding."
+    },
+    {
+        "id": "2024-w4-q7", "year": "2024", "week": "Week 4",
+        "question": "Which of the following is not an effective way to develop reflective thinking?",
+        "options": ["asking questions", "self-questioning", "negotiated learning", "avoiding reflective discussions"],
+        "answer": 3, "answerText": "avoiding reflective discussions",
+        "explanation": "Please go through lecture notes of week-4 (slide no.46) for better understanding."
+    },
+    {
+        "id": "2024-w4-q8", "year": "2024", "week": "Week 4",
+        "question": "Which of the following is not true about creative thinking?",
+        "options": [
+            "It is the ability to consider something in a new way",
+            "It is not a skill anybody can develop",
+            "It is the process of nurturing our imagination",
+            "It is all about developing innovative solutions to problems.",
+            "It requires a compilation of analytical, problem-solving, organizational and communication skills"
+        ],
+        "answer": 1, "answerText": "It is not a skill anybody can develop",
+        "explanation": "Please go through lecture notes of week-4 (slide no.47) for better understanding."
+    },
+    {
+        "id": "2024-w4-q9", "year": "2024", "week": "Week 4",
+        "question": "The stage of the creative thinking process refers to the ‘’eureka’’ moment.",
+        "options": ["insight", "incubation", "evaluation", "preparation", "elaboration"],
+        "answer": 0, "answerText": "insight",
+        "explanation": "Please go through lecture notes of week-4 (slide no.51) for better understanding."
+    },
+    {
+        "id": "2024-w4-q10", "year": "2024", "week": "Week 4",
+        "question": "In a concept map, two nodes connected with a labeled arrow are called a .",
+        "options": ["preposition", "nodal link", "schema", "proposition"],
+        "answer": 3, "answerText": "proposition",
+        "explanation": "Please go through lecture notes of week-4 (slide no.71) for better understanding."
+    },
+
+    # Week 5
+    {
+        "id": "2024-w5-q1", "year": "2024", "week": "Week 5",
+        "question": "Which of the following is not a causal factor for extrinsic motivation?",
+        "options": ["rewards", "social pressure", "curiosity", "financial gain", "punishment"],
+        "answer": 2, "answerText": "curiosity",
+        "explanation": "Please go through lecture notes of week-5 (slide no.05-06) for better understanding."
+    },
+    {
+        "id": "2024-w5-q2", "year": "2024", "week": "Week 5",
+        "question": "___ refers to realizing the value of developing a skill/behavior.",
+        "options": ["Amotivation", "Identified regulation", "Introjected regulation", "Motivational learning"],
+        "answer": 1, "answerText": "Identified regulation",
+        "explanation": "Please go through lecture notes of week-5 (slide no.06) for better understanding."
+    },
+    {
+        "id": "2024-w5-q3", "year": "2024", "week": "Week 5",
+        "question": "Drive theory is a psychological concept that attempts to explain why and how people behave in the ways they do. It is given by .",
+        "options": ["Murray", "Hull", "Atkinson", "Zajonc"],
+        "answer": 1, "answerText": "Hull",
+        "explanation": "Please go through lecture notes of week-5 (slide no.12) for better understanding."
+    },
+    {
+        "id": "2024-w5-q4", "year": "2024", "week": "Week 5",
+        "question": "___ theory suggests that people are motivated to take action in order to receive a reward and is based on the idea of operant conditioning.",
+        "options": ["Incentive", "Arousal", "Goal setting", "None of the given"],
+        "answer": 0, "answerText": "Incentive",
+        "explanation": "Please go through lecture notes of week-5 (slide no.14) for better understanding."
+    },
+    {
+        "id": "2024-w5-q5", "year": "2024", "week": "Week 5",
+        "question": "The Yerkes Dodson law gives relationship between arousal and performance.",
+        "options": ["inverted U shaped", "linear", "no", "parabolic"],
+        "answer": 0, "answerText": "inverted U shaped",
+        "explanation": "Please go through lecture notes of week-5 (slide no.18-19) for better understanding."
+    },
+    {
+        "id": "2024-w5-q6", "year": "2024", "week": "Week 5",
+        "question": "The expectancy theory is based on the assumption that .",
+        "options": [
+            "our behavior is based on making a conscious choice from a set of possible alternative behaviors",
+            "individuals are motivated to seek out stimulation when they have low levels of arousal, but will become bored and unmotivated when they become too highly aroused",
+            "biological needs produce unpleasant states of arousal which people seek to reduce",
+            "none of the given"
+        ],
+        "answer": 0, "answerText": "our behavior is based on making a conscious choice from a set of possible alternative behaviors",
+        "explanation": "Please go through lecture notes of week-5 (slide no.21-25, 29) for better understanding."
+    },
+    {
+        "id": "2024-w5-q7", "year": "2024", "week": "Week 5",
+        "question": "Valence, or the perceived value of reward, would have ___ value if one wants to avoid that.",
+        "options": ["one", "zero", "positive", "negative"],
+        "answer": 3, "answerText": "negative",
+        "explanation": "Please go through lecture notes of week-5 (slide no.24) for better understanding."
+    },
+    {
+        "id": "2024-w5-q8", "year": "2024", "week": "Week 5",
+        "question": "Which of the following is not true about Maslow’s need hierarchy?",
+        "options": [
+            "Needs lower down in the hierarchy must be satisfied before individuals can attend to higher needs",
+            "Safety needs lie at the bottom of the pyramid",
+            "Deficiency needs are concerned with basic survival",
+            "Growth needs are more psychological needs",
+            "Motivation is seen as being not just concerned with tension reduction and survival but also with human growth and development"
+        ],
+        "answer": 1, "answerText": "Safety needs lie at the bottom of the pyramid",
+        "explanation": "Please go through lecture notes of week-5 (slide no.31-35) for better understanding."
+    },
+    {
+        "id": "2024-w5-q9", "year": "2024", "week": "Week 5",
+        "question": "Self-Determination Theory differentiates between and motivation types.",
+        "options": ["autonomous and controlled", "autonomous and intrinsic", "controlled and extrinsic", "introjected and extrinsic", "introjected and intrinsic"],
+        "answer": 0, "answerText": "autonomous and controlled",
+        "explanation": "Please go through lecture notes of week-5 (slide no.37-39) for better understanding."
+    },
+    {
+        "id": "2024-w5-q10", "year": "2024", "week": "Week 5",
+        "question": "In achievement motivation, the motive to avoid failure often consists of .",
+        "options": ["worries about the consequences of failing", "self-criticism", "accelerated heart rate", "all of the given"],
+        "answer": 3, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-5 (slide no.46-47) for better understanding."
+    },
+
+    # Week 6
+    {
+        "id": "2024-w6-q1", "year": "2024", "week": "Week 6",
+        "question": "Daniel Goleman’s work in emotional intelligence (EI) has outlined main areas of this intelligence.",
+        "options": ["three", "four", "five", "six"],
+        "answer": 2, "answerText": "five",
+        "explanation": "Please go through lecture notes of week-6 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2024-w6-q2", "year": "2024", "week": "Week 6",
+        "question": "Which of the following statements is not true?",
+        "options": [
+            "Experts even suggested that emotional intelligence/ EQ, is more important than IQ/academic intelligence",
+            "An individual with high EI is not only aware of what emotions they are feeling but can put words to their feelings",
+            "Studies show that EI does not impact aspects of one’s life like academic performance",
+            "Peter Salovey and John Mayer were the first to develop a psychological theory of emotional intelligence."
+        ],
+        "answer": 2, "answerText": "Studies show that EI does not impact aspects of one’s life like academic performance",
+        "explanation": "Please go through lecture notes of week-6 (slide no.03-04) for better understanding."
+    },
+    {
+        "id": "2024-w6-q3", "year": "2024", "week": "Week 6",
+        "question": "___ refers to how tuned to the emotions of others a person is.",
+        "options": ["Empathy", "Motivation", "Emotional literacy", "Self regulation"],
+        "answer": 0, "answerText": "Empathy",
+        "explanation": "Please go through lecture notes of week-6 (slide no.05) for better understanding."
+    },
+    {
+        "id": "2024-w6-q4", "year": "2024", "week": "Week 6",
+        "question": "The following are advantages of developing emotional intelligence, except------",
+        "options": ["Being able to accept criticism and responsibility", "Knowing why we do the things we do", "Being able to say no when we need to", "Being able to hide our feelings from others"],
+        "answer": 3, "answerText": "Being able to hide our feelings from others",
+        "explanation": "Please go through lecture notes of week-6 (slide no.10) for better understanding."
+    },
+    {
+        "id": "2024-w6-q5", "year": "2024", "week": "Week 6",
+        "question": "The Pyramid of Emotional Intelligence is also known as the layer model.",
+        "options": ["nine", "five", "seven", "eleven"],
+        "answer": 0, "answerText": "nine",
+        "explanation": "Please go through lecture notes of week-6 (slide no.13) for better understanding."
+    },
+    {
+        "id": "2024-w6-q6", "year": "2024", "week": "Week 6",
+        "question": "EI can be developed at any stage of life through self-effort & training.",
+        "options": ["True", "False"],
+        "answer": 0, "answerText": "True",
+        "explanation": "Please go through lecture notes of week-6 (slide no.20) for better understanding."
+    },
+    {
+        "id": "2024-w6-q7", "year": "2024", "week": "Week 6",
+        "question": "When someone engages in , they can regulate their emotions to ensure that others feel more comfortable.",
+        "options": ["emotional exhaustion", "emotional literacy", "empathy", "emotional labor"],
+        "answer": 3, "answerText": "emotional labor",
+        "explanation": "Please go through lecture notes of week-6 (slide no.30) for better understanding."
+    },
+    {
+        "id": "2024-w6-q8", "year": "2024", "week": "Week 6",
+        "question": "The management of emotions is .",
+        "options": ["a private act", "influenced by cultural and social norms", "done by actively shaping and directing feelings", "all of the given"],
+        "answer": 3, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-6 (slide no.30) for better understanding."
+    },
+    {
+        "id": "2024-w6-q9", "year": "2024", "week": "Week 6",
+        "question": "___ is seen when workers change their outward emotional expressions but do not attempt to feel the emotions that they are displaying.",
+        "options": ["deep acting", "emotional contagion", "surface acting", "emotional literacy"],
+        "answer": 2, "answerText": "surface acting",
+        "explanation": "Please go through lecture notes of week-6 (slide no.32) for better understanding."
+    },
+    {
+        "id": "2024-w6-q10", "year": "2024", "week": "Week 6",
+        "question": "The concept of emotional contagion can be linked to biological basis of .",
+        "options": ["emotional neurons", "mirror neurons", "contagious neurons", "None of the given"],
+        "answer": 1, "answerText": "mirror neurons",
+        "explanation": "Please go through lecture notes of week-6 (slide no.36) for better understanding."
+    },
+
+    # Week 7
+    {
+        "id": "2024-w7-q1", "year": "2024", "week": "Week 7",
+        "question": "___ defined learning as ‘a change in human disposition or capacity that persists over a period of time and is not simply ascribable to processes of growth.",
+        "options": ["Bloom", "Dewey", "Gagne", "Kolb"],
+        "answer": 2, "answerText": "Gagne",
+        "explanation": "Please go through lecture notes of week-7 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2024-w7-q2", "year": "2024", "week": "Week 7",
+        "question": "The principles of contiguity (how close in time two events must be for a bond to be formed) and reinforcement (any means of increasing the likelihood that an event will be repeated) are central to explaining the learning process in the orientation to learning.",
+        "options": ["Cognitive", "Humanistic", "Social and social-constructivist", "Behaviorist"],
+        "answer": 3, "answerText": "Behaviorist",
+        "explanation": "Please go through lecture notes of week-7 (slide no.06) for better understanding."
+    },
+    {
+        "id": "2024-w7-q3", "year": "2024", "week": "Week 7",
+        "question": "Which of the following is not true about humanistic orientations to learning?",
+        "options": ["It has a quality of personal involvement", "It is self-initiated", "It is pervasive", "The locus of evaluation resides definitely outside the learner"],
+        "answer": 3, "answerText": "The locus of evaluation resides definitely outside the learner",
+        "explanation": "Please go through lecture notes of week-7 (slide no.08) for better understanding."
+    },
+    {
+        "id": "2024-w7-q4", "year": "2024", "week": "Week 7",
+        "question": "The concept of situated learning is studied under which school of thought of learning theories?",
+        "options": ["behaviorist", "cognitive", "humanistic", "social"],
+        "answer": 3, "answerText": "social",
+        "explanation": "Please go through lecture notes of week-7 (slide no.10) for better understanding."
+    },
+    {
+        "id": "2024-w7-q5", "year": "2024", "week": "Week 7",
+        "question": "Which of the following is not one of the individual variable factors affecting learning?",
+        "options": ["ergonomics", "interest", "endurance", "ego", "perception"],
+        "answer": 0, "answerText": "ergonomics",
+        "explanation": "Please go through lecture notes of week-7 (slide no.14) for better understanding."
+    },
+    {
+        "id": "2024-w7-q6", "year": "2024", "week": "Week 7",
+        "question": "___ learners prefer maps, graphs, diagrams and charts to learn.",
+        "options": ["Visual", "Solitary", "Kinesthetic", "Auditory"],
+        "answer": 0, "answerText": "Visual",
+        "explanation": "Please go through lecture notes of week-7 (slide no.16) for better understanding."
+    },
+    {
+        "id": "2024-w7-q7", "year": "2024", "week": "Week 7",
+        "question": "___ learners search for connections, causes, patterns, and results in their learning.",
+        "options": ["linguistic", "kinesthetic", "visual", "logical"],
+        "answer": 3, "answerText": "logical",
+        "explanation": "Please go through lecture notes of week-7 (slide no.18) for better understanding."
+    },
+    {
+        "id": "2024-w7-q8", "year": "2024", "week": "Week 7",
+        "question": "Effective instruction is .",
+        "options": ["interactive, generative and dynamic", "designed to accommodate student learning needs and styles", "guided by general pedagogical approaches", "eclectic", "all of the given"],
+        "answer": 4, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-7 (slide no.22) for better understanding."
+    },
+    {
+        "id": "2024-w7-q9", "year": "2024", "week": "Week 7",
+        "question": "___ role of the trainer consists of transmitting information about a subject to the audience.",
+        "options": ["expert", "instructor", "facilitator", "co-learner"],
+        "answer": 0, "answerText": "expert",
+        "explanation": "Please go through lecture notes of week-7 (slide no.25) for better understanding."
+    },
+    {
+        "id": "2024-w7-q10", "year": "2024", "week": "Week 7",
+        "question": "Which of the following is not a component of the ADDIE model?",
+        "options": ["analysis", "integration", "development", "evaluation"],
+        "answer": 1, "answerText": "integration",
+        "explanation": "Please go through lecture notes of week-7 (slide no.33-38) for better understanding."
+    },
+
+    # Week 8
+    {
+        "id": "2024-w8-q1", "year": "2024", "week": "Week 8",
+        "question": "The word ‘pedagogy’ has been derived from the Greek word “pedagogue” which stands for .",
+        "options": ["the science of learning", "the art of observing", "the art of teaching children", "none of the given"],
+        "answer": 2, "answerText": "the art of teaching children",
+        "explanation": "Please go through lecture notes of week-8 (slide no.03) for better understanding."
+    },
+    {
+        "id": "2024-w8-q2", "year": "2024", "week": "Week 8",
+        "question": "Which of the following statements is not true about pedagogy?",
+        "options": [
+            "It assists both students and teachers in gaining an in-depth understanding of fundamental material.",
+            "It is about suppressing responses from learners",
+            "It enhances the student-teacher relationship",
+            "It enables teachers to influence student learning with an intention to capture the attention of students"
+        ],
+        "answer": 1, "answerText": "It is about suppressing responses from learners",
+        "explanation": "Please go through lecture notes of week-8 (slide no.03-04) for better understanding."
+    },
+    {
+        "id": "2024-w8-q3", "year": "2024", "week": "Week 8",
+        "question": "Which of the following is not a pedagogical approach in teaching?",
+        "options": ["reflective", "collective", "collaborative", "integrative"],
+        "answer": 1, "answerText": "collective",
+        "explanation": "Please go through lecture notes of week-8 (slide no.05) for better understanding."
+    },
+    {
+        "id": "2024-w8-q4", "year": "2024", "week": "Week 8",
+        "question": "___ is a form of active learning that starts by posing questions, problems or scenarios rather than simply presenting established facts or portraying a smooth path to knowledge.",
+        "options": ["constructivist learning", "passive learning", "inquiry-based learning", "metalearning"],
+        "answer": 2, "answerText": "inquiry-based learning",
+        "explanation": "Please go through lecture notes of week-8 (slide no.07) for better understanding."
+    },
+    {
+        "id": "2024-w8-q5", "year": "2024", "week": "Week 8",
+        "question": "Which of the following is a primary role of the instructor in experiential learning?",
+        "options": ["posing problems", "providing solutions", "blurring boundaries", "none of the given"],
+        "answer": 0, "answerText": "posing problems",
+        "explanation": "Please go through lecture notes of week-8 (slide no.16) for better understanding."
+    },
+    {
+        "id": "2024-w8-q6", "year": "2024", "week": "Week 8",
+        "question": "The ‘’what is important?” stage of the experiential learning process refers to the ___ stage.",
+        "options": ["processing", "generalizing", "application", "reflecting"],
+        "answer": 0, "answerText": "processing",
+        "explanation": "Please go through lecture notes of week-8 (slide no.17) for better understanding."
+    },
+    {
+        "id": "2024-w8-q7", "year": "2024", "week": "Week 8",
+        "question": "The ___ learning style as given by Kolb suggests that these individuals prefer to look at things from multiple perspectives and prefer to watch rather than do.",
+        "options": ["Assimilating", "Accommodating", "Converging", "Diverging"],
+        "answer": 3, "answerText": "Diverging",
+        "explanation": "Please go through lecture notes of week-8 (slide no.24-25) for better understanding."
+    },
+    {
+        "id": "2024-w8-q8", "year": "2024", "week": "Week 8",
+        "question": "The following factors influence preferred learning styles except",
+        "options": ["career choice", "personality", "educational specialization", "genes"],
+        "answer": 3, "answerText": "genes",
+        "explanation": "Please go through lecture notes of week-8 (slide no.27) for better understanding."
+    },
+    {
+        "id": "2024-w8-q9", "year": "2024", "week": "Week 8",
+        "question": "Integrative learning often involves three steps. Which of the following is not one of them?",
+        "options": ["collaboration", "integrative enquiry", "application and transfer", "reflection"],
+        "answer": 0, "answerText": "collaboration",
+        "explanation": "Please go through lecture notes of week-8 (slide no.33) for better understanding."
+    },
+    {
+        "id": "2024-w8-q10", "year": "2024", "week": "Week 8",
+        "question": "In transformative learning, includes a student’s habit of the mind, as well as a personal point of view.",
+        "options": ["intentional content", "frame of reference", "frame of context", "none of the given"],
+        "answer": 1, "answerText": "frame of reference",
+        "explanation": "Please go through lecture notes of week-8 (slide no.53) for better understanding."
+    },
+
+    # Week 9
+    {
+        "id": "2024-w9-q1", "year": "2024", "week": "Week 9",
+        "question": "E-learning implies learning",
+        "options": ["mentor assisted", "teacher enhanced", "computer enhanced", "electricity enhanced"],
+        "answer": 2, "answerText": "computer enhanced",
+        "explanation": "Please go through lecture notes of week-9 (slide no.05) for better understanding."
+    },
+    {
+        "id": "2024-w9-q2", "year": "2024", "week": "Week 9",
+        "question": "___ type of e-learning is highly interactive, which includes graphics, video, audio and games too.",
+        "options": ["text driven", "simulation", "interactive", "none of the given"],
+        "answer": 1, "answerText": "simulation",
+        "explanation": "Please go through lecture notes of week-9 (slide no.06) for better understanding."
+    },
+    {
+        "id": "2024-w9-q3", "year": "2024", "week": "Week 9",
+        "question": "Which of the following is not true about e-learning?",
+        "options": [
+            "one can have access to the content any number of times",
+            "it helps in developing new policies",
+            "it saves time for the students, they don’t need to travel to the institution",
+            "it is targeted to cater to the needs of students specifically"
+        ],
+        "answer": 3, "answerText": "it is targeted to cater to the needs of students specifically",
+        "explanation": "Please go through lecture notes of week-9 (slide no.06-09) for better understanding."
+    },
+    {
+        "id": "2024-w9-q4", "year": "2024", "week": "Week 9",
+        "question": "As learning depends on the learner’s prior experience, and no two learners will have the same experiences, new information will be dealt with in different ways by different learners. This statement means that learning is .",
+        "options": ["goal-oriented", "dependent on self-awareness", "social", "idiosyncratic"],
+        "answer": 3, "answerText": "idiosyncratic",
+        "explanation": "Please go through lecture notes of week-9 (slide no.10-11) for better understanding."
+    },
+    {
+        "id": "2024-w9-q5", "year": "2024", "week": "Week 9",
+        "question": "Which of the following is a way of facilitating the social dimension to learning?",
+        "options": ["e-mails", "online discussions", "virtual communities", "all of the given"],
+        "answer": 3, "answerText": "all of the given",
+        "explanation": "Please go through lecture notes of week-9 (slide no.12) for better understanding."
+    },
+    {
+        "id": "2024-w9-q6", "year": "2024", "week": "Week 9",
+        "question": "We can say that when we're good at something after practice, it's usually because",
+        "options": ["our brain has become automated", "our brain has released better chemicals", "our brain has made stronger connections with this information", "our brain has prioritized this information over others"],
+        "answer": 2, "answerText": "our brain has made stronger connections with this information",
+        "explanation": "Please go through lecture notes of week-9 (slide no.15) for better understanding."
+    },
+    {
+        "id": "2024-w9-q7", "year": "2024", "week": "Week 9",
+        "question": "Learners may multitask when engaging in an online course, which could be resulting in .",
+        "options": ["hyperfocus", "better retrieval", "shorter attention spans", "None of the given"],
+        "answer": 2, "answerText": "shorter attention spans",
+        "explanation": "Please go through lecture notes of week-9 (slide no.19) for better understanding."
+    },
+    {
+        "id": "2024-w9-q8", "year": "2024", "week": "Week 9",
+        "question": "The cognitive load theory suggests that when we overload our , we are unable to acquire and process new information.",
+        "options": ["sensory memory", "encoding", "retrieval", "working memory"],
+        "answer": 3, "answerText": "working memory",
+        "explanation": "Please go through lecture notes of week-9 (slide no.18) for better understanding."
+    },
+    {
+        "id": "2024-w9-q9", "year": "2024", "week": "Week 9",
+        "question": "There are five critical aspects of psychology which are needed to guarantee the implementation of successful eLearning. Which of the following is not one of them?",
+        "options": ["evolution", "self-discipline", "stress", "emotion"],
+        "answer": 0, "answerText": "evolution",
+        "explanation": "Please go through lecture notes of week-9 (slide no.23) for better understanding."
+    },
+    {
+        "id": "2024-w9-q10", "year": "2024", "week": "Week 9",
+        "question": "___ is a learning tool, because the explicit navigation of the topic and association types might enable meaningful learning and it helps to reduce the cognitive loads caused by E-learning content and constant attention.",
+        "options": ["topic map", "schema", "prototype", "instructional map"],
+        "answer": 0, "answerText": "topic map",
+        "explanation": "Please go through lecture notes of week-9 (slide no.25) for better understanding."
+    },
+
+    # Week 10
+    {
+        "id": "2024-w10-q1", "year": "2024", "week": "Week 10",
+        "question": "The Readiness Model for New Normal in Education designed by many educational institutions caters to the following components except .",
+        "options": ["parent readiness", "learner readiness", "society readiness", "teacher readiness"],
+        "answer": 2, "answerText": "society readiness",
+        "explanation": "Please go through lecture notes of week-10 (slide no.02-04) for better understanding."
+    },
+    {
+        "id": "2024-w10-q2", "year": "2024", "week": "Week 10",
+        "question": "In 2018, Global Education and Skills Forum noted that the ‘future’ teacher would need some skills to thrive in the 21st century. Which of the following is not one of them?",
+        "options": ["Being a facilitator", "Internal focus", "Strong social skills", "Data analysis"],
+        "answer": 1, "answerText": "Internal focus",
+        "explanation": "Please go through lecture notes of week-10 (slide no.06) for better understanding."
+    },
+    {
+        "id": "2024-w10-q3", "year": "2024", "week": "Week 10",
+        "question": "Which of the following impacts student learning?",
+        "options": ["Their perception about their intelligence and ability", "Prior knowledge", "Their context", "All of the given"],
+        "answer": 3, "answerText": "All of the given",
+        "explanation": "Please go through lecture notes of week-10 (slide no.10-11) for better understanding."
+    },
+    {
+        "id": "2024-w10-q4", "year": "2024", "week": "Week 10",
+        "question": "Which of the following statements is not true?",
+        "options": [
+            "Techniques linked to self-control contribute to more effective learning if taught and applied correctly",
+            "Student creativity can be encouraged.",
+            "Clear, explanatory and timely feedback to students is important for learning",
+            "Students tend to enjoy learning and have better outcomes when their motivation is more extrinsic than intrinsic"
+        ],
+        "answer": 3, "answerText": "Students tend to enjoy learning and have better outcomes when their motivation is more extrinsic than intrinsic",
+        "explanation": "Please go through lecture notes of week-10 (slide no.14-15) for better understanding."
+    },
+    {
+        "id": "2024-w10-q5", "year": "2024", "week": "Week 10",
+        "question": "Both formative and summative assessment are important and useful, provided they are applied and interpreted appropriately.",
+        "options": ["True", "False"],
+        "answer": 0, "answerText": "True",
+        "explanation": "Please go through lecture notes of week-10 (slide no.18) for better understanding."
+    },
+    {
+        "id": "2024-w10-q6", "year": "2024", "week": "Week 10",
+        "question": "Individual differences are the unique ways each human being differs from another. It can be handled through using different techniques. Which of the following is not one of them?",
+        "options": ["observation", "sociograms", "rating scales", "ignorance"],
+        "answer": 3, "answerText": "ignorance",
+        "explanation": "Please go through lecture notes of week-10 (slide no.22) for better understanding."
+    },
+    {
+        "id": "2024-w10-q7", "year": "2024", "week": "Week 10",
+        "question": "Clapping is an example of reward.",
+        "options": ["tangible", "financial", "social", "none of the given"],
+        "answer": 2, "answerText": "social",
+        "explanation": "Please go through lecture notes of week-10 (slide no.24) for better understanding."
+    },
+    {
+        "id": "2024-w10-q8", "year": "2024", "week": "Week 10",
+        "question": "___ is the process of judging the value or worth of an individual's achievements or characteristics.",
+        "options": ["Goal-setting", "Classroom conduct", "Formation", "Evaluation"],
+        "answer": 3, "answerText": "Evaluation",
+        "explanation": "Please go through lecture notes of week-10 (slide no.38) for better understanding."
+    },
+    {
+        "id": "2024-w10-q9", "year": "2024", "week": "Week 10",
+        "question": "___ refers to the frequent, interactive assessment of student progress to identify learning needs and shape teaching.",
+        "options": ["Formative assessment", "Summative assessment", "Collective assessment", "None of the given"],
+        "answer": 0, "answerText": "Formative assessment",
+        "explanation": "Please go through lecture notes of week-10 (slide no.47) for better understanding."
+    },
+    {
+        "id": "2024-w10-q10", "year": "2024", "week": "Week 10",
+        "question": "‘’That is an intelligent response, well done’’ is an example of a level feedback.",
+        "options": ["Task-level", "Process-level", "Facilitator-level", "Personal-level"],
+        "answer": 3, "answerText": "Personal-level",
+        "explanation": "Please go through lecture notes of week-10 (slide no.84-85) for better understanding."
+    },
+
+    # Week 11
+    {
+        "id": "2024-w11-q1", "year": "2024", "week": "Week 11",
+        "question": "___ refers to a complex set of mental abilities underlying social stimulus perception, processing, interpretation, and response.",
+        "options": ["social schema", "emotional cognition", "social cognition", "emotional schema"],
+        "answer": 2, "answerText": "social cognition",
+        "explanation": "Please go through lecture notes of week-11 (slide no.02) for better understanding."
+    },
+    {
+        "id": "2024-w11-q2", "year": "2024", "week": "Week 11",
+        "question": "Piaget’s conception of views information inconsistent with an individual’s cognitive structures as an initiator for assimilation and accommodation processes.",
+        "options": ["assimilation and accommodation schema", "cognitive determinism", "reciprocal dynamism", "cognitive conflict"],
+        "answer": 3, "answerText": "cognitive conflict",
+        "explanation": "Please go through lecture notes of week-11 (slide no.31) for better understanding."
+    },
+    {
+        "id": "2024-w11-q3", "year": "2024", "week": "Week 11",
+        "question": "During the earliest stages of development, children see the world from their own perspective and struggle to think about how other people may view the world. This highlights that initially, children are .",
+        "options": ["egocentric", "idiosyncratic", "egoistic", "egomaniac"],
+        "answer": 0, "answerText": "egocentric",
+        "explanation": "Please go through lecture notes of week-11 (slide no.06) for better understanding."
+    },
+    {
+        "id": "2024-w11-q4", "year": "2024", "week": "Week 11",
+        "question": "Which of the following is false regarding social cognition?",
+        "options": [
+            "It develops in childhood and adolescence",
+            "When looking at a social situation, any two people may have wildly different interpretations.",
+            "It includes complex abilities like theory of mind",
+            "There are no cultural differences in social cognition"
+        ],
+        "answer": 3, "answerText": "There are no cultural differences in social cognition",
+        "explanation": "Please go through lecture notes of week-11 (slide no.02-06) for better understanding."
+    },
+    {
+        "id": "2024-w11-q5", "year": "2024", "week": "Week 11",
+        "question": "Social processes influence how information is selected, organized, integrated, and retrieved. This highlights the hypothesis.",
+        "options": ["social cue", "cognitive influence", "schema influence", "social mediation"],
+        "answer": 1, "answerText": "cognitive influence",
+        "explanation": "Please go through lecture notes of week-11 (slide no.30) for better understanding."
+    },
+    {
+        "id": "2024-w11-q6", "year": "2024", "week": "Week 11",
+        "question": "The social cognitive theory is developed by .",
+        "options": ["Watson", "Piaget", "Bandura", "Freud"],
+        "answer": 2, "answerText": "Bandura",
+        "explanation": "Please go through lecture notes of week-11 (slide no.11) for better understanding."
+    },
+    {
+        "id": "2024-w11-q7", "year": "2024", "week": "Week 11",
+        "question": "___ refers to the internal or external responses to a person's behavior that affect the likelihood of continuing or discontinuing the behavior.",
+        "options": ["modeling", "schemas", "awards", "reinforcements"],
+        "answer": 3, "answerText": "reinforcements",
+        "explanation": "Please go through lecture notes of week-11 (slide no.24) for better understanding."
+    },
+    {
+        "id": "2024-w11-q8", "year": "2024", "week": "Week 11",
+        "question": "Observational learning occurs through the sequence of number of processes. One of those is attentional processes.",
+        "options": ["four", "five", "six", "seven"],
+        "answer": 0, "answerText": "four",
+        "explanation": "Please go through lecture notes of week-11 (slide no.15) for better understanding."
+    },
+    {
+        "id": "2024-w11-q9", "year": "2024", "week": "Week 11",
+        "question": "The model of observational learning involves an actual individual demonstrating or acting out a behavior.",
+        "options": ["live", "symbolic", "verbal instructional", "contextual"],
+        "answer": 0, "answerText": "live",
+        "explanation": "Please go through lecture notes of week-11 (slide no.17) for better understanding."
+    },
+    {
+        "id": "2024-w11-q10", "year": "2024", "week": "Week 11",
+        "question": "___ suggests that our behavior, personal factors, and environmental factors all influence each other.",
+        "options": ["environmental dynamism", "reciprocal determinism", "collective determinism", "reciprocal dynamism"],
+        "answer": 1, "answerText": "reciprocal determinism",
+        "explanation": "Please go through lecture notes of week-11 (slide no.19) for better understanding."
+    }
+]
+
+print(f"2024 count: {len(data)}")
+with open('data_2024.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, indent=2)

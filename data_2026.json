@@ -1043,151 +1043,147 @@
     "id": "2026-w7-q1",
     "year": "2026",
     "week": "Week 7",
-    "question": "Which of the following is false about learning according to Gagne\u2019s definition?",
+    "question": "Simon defined learning as changes in a system that result in ___ over time on tasks similar to those done previously.",
     "options": [
-      "It is a change in human disposition",
-      "It persists over a period of time",
-      "It is simply ascribable to processes of growth",
-      "None of the above"
+      "Boredom",
+      "Decreased anxiety",
+      "Improved performance",
+      "Reduced performance"
     ],
     "answer": 2,
-    "answerText": "It is simply ascribable to processes of growth",
-    "explanation": "Please go through lecture notes of week-7 (slide no.03) for better understanding."
+    "answerText": "Improved performance",
+    "explanation": "According to Simon, learning involves changes in a system that improve its performance over time on similar tasks."
   },
   {
     "id": "2026-w7-q2",
     "year": "2026",
     "week": "Week 7",
-    "question": "Manual or physical skills come under ___ component of Bloom\u2019s taxonomy.",
+    "question": "Robert Gagne defined learning as ___.",
     "options": [
-      "Cognitive",
-      "Affective",
-      "Psychomotor",
-      "Physical"
+      "A change in human disposition or capacity",
+      "A change that persists over a period of time",
+      "A change not simply ascribable to processes of growth",
+      "All of the given"
     ],
-    "answer": 2,
-    "answerText": "Psychomotor",
-    "explanation": "Please go through lecture notes of week-7 (slide no.04) for better understanding."
+    "answer": 3,
+    "answerText": "All of the given",
+    "explanation": "Gagne defined learning as a change in human disposition or capacity that persists over time and cannot simply be attributed to growth."
   },
   {
     "id": "2026-w7-q3",
     "year": "2026",
     "week": "Week 7",
-    "question": "Reflection, learning and education was explored by ___.",
+    "question": "Psychomotor skills are ___ skills.",
     "options": [
-      "Carl Rogers",
-      "John Watson",
-      "Benjamin Bloom",
-      "John Dewey"
+      "Cognitive",
+      "Spiritual",
+      "Mental",
+      "Physical"
     ],
     "answer": 3,
-    "answerText": "John Dewey",
-    "explanation": "Please go through lecture notes of week-7 (slide no.05) for better understanding."
+    "answerText": "Physical",
+    "explanation": "Psychomotor skills involve physical movement, coordination, and the use of motor abilities."
   },
   {
     "id": "2026-w7-q4",
     "year": "2026",
     "week": "Week 7",
-    "question": "The principles of ___ refer to how close in time two events must be for a bond to be formed.",
+    "question": "Returning to experience refers to ___.",
     "options": [
-      "behavior",
-      "reinforcement",
-      "repetition",
-      "contiguity"
+      "Attending to feelings",
+      "Re-examining experience in the light of one's intent and existing knowledge",
+      "Using helpful feelings and removing obstructive ones",
+      "Recalling or detailing salient events"
     ],
     "answer": 3,
-    "answerText": "contiguity",
-    "explanation": "Please go through lecture notes of week-7 (slide no.6) for better understanding."
+    "answerText": "Recalling or detailing salient events",
+    "explanation": "Returning to experience involves recalling and describing significant events or experiences as part of reflective learning."
   },
   {
     "id": "2026-w7-q5",
     "year": "2026",
     "week": "Week 7",
-    "question": "___ gives information to learners about their success or failure concerning the task at hand.",
+    "question": "Which of the following assumptions does not come under the behaviorist orientation to learning?",
     "options": [
-      "Cognitive feedback",
-      "Emotional feedback",
-      "Reinforcement",
-      "Physical feedback"
+      "Differences between individuals are important as they will affect learning",
+      "Observable behavior rather than internal thought processes are the focus of study",
+      "Environment shapes one's behavior",
+      "The principle of contiguity is central"
     ],
     "answer": 0,
-    "answerText": "Cognitive feedback",
-    "explanation": "Please go through lecture notes of week-7 (slide no.7) for better understanding."
+    "answerText": "Differences between individuals are important as they will affect learning",
+    "explanation": "Behaviorism primarily focuses on observable behavior and environmental influences rather than individual differences or internal mental processes."
   },
   {
     "id": "2026-w7-q6",
     "year": "2026",
     "week": "Week 7",
-    "question": "The ___ orientation to learning has a quality of personal involvement\u2014the whole person in both feeling and cognitive aspects being in the learning event.",
+    "question": "Reinforcement can come through sharing of results rather than a reward.",
     "options": [
-      "behavioral",
-      "cognitive",
-      "humanistic",
-      "social"
+      "True",
+      "False"
     ],
-    "answer": 2,
-    "answerText": "humanistic",
-    "explanation": "Please go through lecture notes of week-7 (slide no.8) for better understanding."
+    "answer": 0,
+    "answerText": "True",
+    "explanation": "Sharing results provides feedback about performance, which can reinforce learning even without an explicit reward."
   },
   {
     "id": "2026-w7-q7",
     "year": "2026",
     "week": "Week 7",
-    "question": "Learning through play is ___ learning.",
+    "question": "___ has contributed to the humanistic orientations to learning.",
     "options": [
-      "primary",
-      "secondary",
-      "passive",
-      "active"
+      "Linguistic",
+      "Kinesthetic",
+      "Visual",
+      "Carl Rogers"
     ],
     "answer": 3,
-    "answerText": "active",
-    "explanation": "Please go through lecture notes of week-7 (slide no.15) for better understanding."
+    "answerText": "Carl Rogers",
+    "explanation": "Carl Rogers was a major contributor to humanistic psychology and emphasized learner-centered education and personal growth."
   },
   {
     "id": "2026-w7-q8",
     "year": "2026",
     "week": "Week 7",
-    "question": "People with ___ learning style are prone to sorting their ideas after speaking, rather than thinking ideas through before.",
+    "question": "In the process of learning, which of the following is not a component of output?",
     "options": [
-      "logical",
-      "solitary",
-      "visual",
-      "auditory"
+      "Certification",
+      "Attitude change",
+      "Knowledge enhancement",
+      "Training plan"
     ],
     "answer": 3,
-    "answerText": "auditory",
-    "explanation": "Please go through lecture notes of week-7 (slide no.17) for better understanding."
+    "answerText": "Training plan",
+    "explanation": "A training plan is part of the preparation or planning stage, whereas certification, attitude change, and knowledge enhancement can be learning outcomes."
   },
   {
     "id": "2026-w7-q9",
     "year": "2026",
     "week": "Week 7",
-    "question": "Which of the following statements is false?",
+    "question": "Ambience, space and decorum do not affect learning.",
     "options": [
-      "Effective instruction is static",
-      "Effective instruction is eclectic",
-      "Effective instruction is generative",
-      "Effective instruction is interactive"
+      "True",
+      "False"
     ],
-    "answer": 0,
-    "answerText": "Effective instruction is static",
-    "explanation": "Please go through lecture notes of week-7 (slide no.22) for better understanding."
+    "answer": 1,
+    "answerText": "False",
+    "explanation": "The learning environment, including ambience, physical space, and decorum, can influence concentration, engagement, and learning outcomes."
   },
   {
     "id": "2026-w7-q10",
     "year": "2026",
     "week": "Week 7",
-    "question": "In ADDIE model, I stand for ___.",
+    "question": "Role-playing can motivate ___ type of learners effectively.",
     "options": [
-      "instruction",
-      "implementation",
-      "integration",
-      "induction"
+      "Solitary",
+      "Social",
+      "Reading/writing",
+      "Logical/analytical"
     ],
     "answer": 1,
-    "answerText": "implementation",
-    "explanation": "Please go through lecture notes of week-7 (slide no.33) for better understanding."
+    "answerText": "Social",
+    "explanation": "Role-playing involves interaction and collaboration, making it particularly effective for social learners."
   },
   {
     "id": "2026-w8-q1",
